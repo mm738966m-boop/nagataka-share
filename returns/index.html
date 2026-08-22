@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>リターン設計 v2｜ながたか・起業共創プロジェクト</title>
+<meta property="og:title" content="リターン設計 v2">
+<meta property="og:description" content="ラボメン方針変更を受けた組み直し。100万円の積み上げを3シナリオで。">
+<style>
+:root{
+  --accent:#0d9488;--accent-deep:#0f766e;--ink:#1f2937;--muted:#6b7280;
+  --hair:#e5e7eb;--bg:#f4f6f7;--paper:#fff;--soft:#e6f4f2;
+  --warn-bg:#fff5ec;--warn-ink:#b4460f;--warn-line:#f6d4b4;
+  --ok-bg:#eaf6f1;--ok-ink:#15704f;--ok-line:#bfe3d3;
+  --dim-bg:#f6f7f8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.9;font-size:15px;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:26px 16px 70px;display:flex;flex-direction:column;gap:16px}
+.head{text-align:center;border-bottom:3px solid var(--accent);padding-bottom:16px}
+.badge{display:inline-block;font-size:11px;color:var(--accent);border:1px solid var(--accent);
+  border-radius:999px;padding:3px 12px;letter-spacing:.12em}
+h1{font-size:22px;margin:8px 0 4px;text-wrap:balance}
+.sub{color:var(--muted);font-size:13px;margin:0}
+section{background:var(--paper);border:1px solid var(--hair);border-radius:14px;padding:18px}
+h2{font-size:16px;color:var(--accent);border-left:5px solid var(--accent);padding-left:10px;margin:0 0 12px}
+h3{font-size:14px;margin:16px 0 6px;color:var(--accent-deep)}
+p{margin:0 0 12px}section>p:last-child{margin-bottom:0}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--hair);vertical-align:top}
+th{background:var(--soft);font-size:12px;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price{font-weight:700;color:var(--accent-deep);white-space:nowrap}
+.load{font-size:11px;border-radius:5px;padding:1px 7px;white-space:nowrap;font-weight:700}
+.l-low{background:var(--ok-bg);color:var(--ok-ink)}
+.l-mid{background:#fff7e8;color:#a16207}
+.l-high{background:var(--warn-bg);color:var(--warn-ink)}
+.cap{font-size:11px;color:var(--muted)}
+tfoot td{background:var(--soft);font-weight:700;border-bottom:none}
+.sc{display:flex;flex-direction:column;gap:8px}
+.scenario{border:1px solid var(--hair);border-radius:11px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.scenario .nm{font-weight:700;font-size:14px;flex:1 1 100%}
+.scenario .amt{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.scenario .meta{font-size:12px;color:var(--muted)}
+.sc-bad{background:var(--warn-bg);border-color:var(--warn-line)}
+.sc-bad .amt,.sc-bad .nm{color:var(--warn-ink)}
+.sc-ok{background:var(--ok-bg);border-color:var(--ok-line)}
+.sc-ok .amt,.sc-ok .nm{color:var(--ok-ink)}
+.warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:11px;padding:14px 16px;font-size:14px}
+.warn b{color:var(--warn-ink)}
+.note{background:var(--dim-bg);border-radius:10px;padding:12px 14px;font-size:13.5px}
+ul{margin:6px 0;padding-left:1.25em}li{margin:6px 0;font-size:14px}
+.foot{text-align:center;color:var(--muted);font-size:11.5px}
+.foot a{color:var(--accent-deep)}
+</style></head><body><div class="wrap">
+
+<header class="head">
+  <span class="badge">DRAFT v2 · 2026.08.16</span>
+  <h1>リターン設計 v2</h1>
+  <p class="sub">ながたか・起業共創プロジェクト ／ 目標100万円・11月1日公開</p>
+</header>
+
+<section>
+  <h2>なぜ組み直すのか</h2>
+  <p>最初の想定は「105人・ラボメン55人が前提」でした。</p>
+  <p>キックオフで<b>ラボメンのみなさんには金額をお願いしない</b>方針を決めたので、この前提が変わります。</p>
+  <p>そこで、人数と単価を組み直しました。</p>
+  <div class="note">考え方は<b>「人数はVoicyリスナー全体で、金額は外部と法人で」</b>。<br>
+  低単価だけを厚くすると金額が届かず、高単価だけだと支援者数が少なく見えてしまいます。<br>
+  その両方を satisfies する配分を探しました。</div>
+</section>
+
+<section>
+  <h2>さおりさんの700万円から学んだこと</h2>
+  <ul>
+    <li><b>本業をリターンで「お試し販売」する</b><br>これから法人でやるサービスを、先にリターンとして出す。支援者にとっては体験、こちらにとっては最初の顧客になる</li>
+    <li><b>途中でリターンを追加する</b><br>公開後に新しいリターンが出ると、同じ人が2つ3つ買ってくれる。中だるみも防げる</li>
+    <li><b>高単価のピンポイント枠が効く</b><br>11万円台が10人ほど出ていた。数は少なくても金額の柱になる</li>
+    <li><b>ファンが喜ぶ小さな企画を厚くする</b><br>音声メッセージ、名前紹介など。原価はかからず、熱量が上がる</li>
+  </ul>
+</section>
+
+<section>
+  <h2>リターン案（8階層）</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>金額</th><th>内容</th><th>負担</th><th class="num">上限</th></tr></thead>
+    <tbody>
+      <tr><td class="price">¥1,000</td><td><b>応援コース</b><br><span class="cap">お礼メッセージ／活動報告／サイトにお名前掲載</span></td><td><span class="load l-low">低</span></td><td class="num">—</td></tr>
+      <tr><td class="price">¥3,000</td><td>＋<b>限定音声レター</b><br><span class="cap">Voicyでは出していない「想い」の回</span></td><td><span class="load l-low">低</span></td><td class="num">—</td></tr>
+      <tr><td class="price">¥5,000</td><td>＋<b>オンライン報告会</b>＋実践ガイド<br><span class="cap">中高年の運動・一般健康の「今日からできる」PDF</span></td><td><span class="load l-low">低</span></td><td class="num">—</td></tr>
+      <tr><td class="price">¥10,000</td><td>＋<b>少人数オンライン相談会</b><br><span class="cap">グループ形式・質問し放題</span></td><td><span class="load l-mid">中</span></td><td class="num">15</td></tr>
+      <tr><td class="price">¥15,000</td><td>＋<b>名入れプロテインシェイカー</b>＋アクスタガチャ<br><span class="cap">市販品ベースで安価に制作。ガチャは例の写真シリーズで</span></td><td><span class="load l-low">低</span></td><td class="num">15</td></tr>
+      <tr><td class="price">¥30,000</td><td><b>あなたの活動量を測定＋食事調査</b><br><span class="cap">研究用測定機で活動量、数日間の食事からカロリーを算出しフィードバック</span></td><td><span class="load l-mid">中</span></td><td class="num">8</td></tr>
+      <tr><td class="price">¥50,000</td><td><b>3ヶ月伴走コース</b>（ダイエット／増量）<br><span class="cap">LINEで伴走。法人でやる本サービスのお試し</span></td><td><span class="load l-high">高</span></td><td class="num">5</td></tr>
+      <tr><td class="price">¥100,000</td><td><b>法人スポンサー枠</b><br><span class="cap">健康経営セミナー1回 or 顧問相談＋サイトにロゴ掲載</span></td><td><span class="load l-mid">中</span></td><td class="num">5</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="cap" style="margin-top:10px">負担＝ながたかさんの手間。<b>高</b>のものは上限数を絞っています。<br>
+  測定機の利用は、大学への確認が必要です。</p>
+</section>
+
+<section>
+  <h2>100万円の積み上げ</h2>
+  <p>法人スポンサー枠が何枠取れるかで、着地が大きく変わります。</p>
+  <div class="sc">
+    <div class="scenario sc-bad">
+      <span class="nm">堅実シナリオ（法人スポンサー 1枠）</span>
+      <span class="amt">785,000円</span>
+      <span class="meta">支援 92人／平均 8,532円　→ 目標未達</span>
+    </div>
+    <div class="scenario sc-ok">
+      <span class="nm">標準シナリオ（法人スポンサー 3枠）</span>
+      <span class="amt">985,000円</span>
+      <span class="meta">支援 94人／平均 10,478円　→ ほぼ達成</span>
+    </div>
+    <div class="scenario">
+      <span class="nm">上振れシナリオ（法人5枠＋高単価が伸びる）</span>
+      <span class="amt">1,485,000円</span>
+      <span class="meta">支援 117人／平均 12,692円　→ ネクストゴールへ</span>
+    </div>
+  </div>
+
+  <h3>標準シナリオの内訳</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>金額</th><th class="num">人数</th><th class="num">小計</th></tr></thead>
+    <tbody>
+      <tr><td class="price">¥1,000 応援コース</td><td class="num">30</td><td class="num">30,000</td></tr>
+      <tr><td class="price">¥3,000 ＋限定音声</td><td class="num">20</td><td class="num">60,000</td></tr>
+      <tr><td class="price">¥5,000 ＋報告会</td><td class="num">15</td><td class="num">75,000</td></tr>
+      <tr><td class="price">¥10,000 ＋少人数相談会</td><td class="num">10</td><td class="num">100,000</td></tr>
+      <tr><td class="price">¥15,000 シェイカー＋ガチャ</td><td class="num">8</td><td class="num">120,000</td></tr>
+      <tr><td class="price">¥30,000 測定＋食事調査</td><td class="num">5</td><td class="num">150,000</td></tr>
+      <tr><td class="price">¥50,000 3ヶ月伴走</td><td class="num">3</td><td class="num">150,000</td></tr>
+      <tr><td class="price">¥100,000 法人スポンサー</td><td class="num">3</td><td class="num">300,000</td></tr>
+    </tbody>
+    <tfoot><tr><td>合計</td><td class="num">94人</td><td class="num">985,000</td></tr></tfoot>
+  </table>
+  </div>
+
+  <div class="warn" style="margin-top:14px">
+    <b>この表がいちばん言いたいこと</b><br>
+    法人スポンサーが1枠増えるごとに、目標の10%が動きます。<br>
+    低単価をどれだけ積んでも、この1枠には届きません。<br>
+    <b>つまり最優先は、外部・法人の当たり先を早く決めることです。</b><br>
+    ニックさんはすでに前向きに言ってくださっています。あと2〜4件をどこに当たるか、次のMTGで名前を出したいところです。
+  </div>
+</section>
+
+<section>
+  <h2>途中で追加するリターン（弾を残しておく）</h2>
+  <p>公開時にすべてを出しません。<br>
+  中だるみするタイミングで新しいリターンを出すと、一度支援した方がもう一度動いてくれます。</p>
+  <ul>
+    <li><b>2週目あたり</b>：ながたかさんが作る食事会（ブロッコリーのフルコース）／一緒にトレーニング</li>
+    <li><b>中間〜後半</b>：希望テーマのオーダーメイド講習会（階段だけの講習会、昇降デスクの論文まとめ など）</li>
+    <li><b>執筆が決まったら</b>：サイン入り教科書＋ブロマイド1枚<br><span class="cap">教科書の話が確定した時点で投入できると、いちばん強い弾になります</span></li>
+    <li><b>目標達成後</b>：支援者全員への特別コンテンツを解放（達成後の失速を防ぐ）</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ネクストゴール</h2>
+  <ul>
+    <li><b>100万円</b>　法人を設立し、活動を始めます</li>
+    <li><b>200万円</b>　（できることを追記）</li>
+    <li><b>300万円</b>　自治体・団体との連携に着手</li>
+  </ul>
+  <p class="cap">200万・300万の中身は、ながたかさんと詰めて確定させます。<br>
+  「金額が増えると、できることが増える」と見える形にするのが狙いです。</p>
+</section>
+
+<section>
+  <h2>次のMTGで決めたいこと</h2>
+  <ul>
+    <li>法人スポンサー枠の当たり先（ニックさん以外にあと2〜4件）</li>
+    <li>測定機を使うリターンの可否（大学への確認）</li>
+    <li>3ヶ月伴走の上限数と進め方（ながたかさんが疲れない形か）</li>
+    <li>各リターンの原価と発送の有無（送料が出るものは基本入れない方針）</li>
+    <li>ラボメンのみなさんに「どんなリターンがほしいか」を聞くタイミング</li>
+  </ul>
+</section>
+
+<p class="foot">ながたか・起業共創プロジェクト ／ fulfull<br>
+<a href="../">キックオフ議事録</a>　·　<a href="../story/">物語パート原稿</a></p>
+</div></body></html>
