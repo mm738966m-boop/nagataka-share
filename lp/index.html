@@ -76,7 +76,7 @@ h2{font-size:clamp(26px,7vw,34px);margin:6px 0 20px}
 .when{background:var(--leaf);border-radius:20px;padding:20px;text-align:center}
 .when small{display:block;font-weight:700;color:var(--green);font-size:15px}
 .when b{display:block;font-size:clamp(30px,8.6vw,42px);font-weight:900;line-height:1.3;font-variant-numeric:tabular-nums}
-.when span{display:block;font-size:16px;color:var(--muted)}
+.when>span{display:block;font-size:16px;color:var(--muted)}
 .steps{counter-reset:s;list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:10px}
 .steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;font-weight:700;line-height:1.65}
 .steps li::before{content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900}
@@ -172,7 +172,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:26px 20px 10p
 <section class="cf"><div class="wrap">
   <p class="kicker">クラウドファンディング</p>
   <h2>最初の一歩を、一緒に。</h2>
-  <div class="when"><small>CAMPFIREにて</small><b>11/1（日）→ 12/15（火）</b><span>45日間</span></div>
+  <div class="when"><small>CAMPFIREにて</small><b><span style="white-space:nowrap">11/1（日）</span> <span style="white-space:nowrap">→ 12/15（火）</span></b><span>45日間</span></div>
   <ol class="steps">
     <li><div>LINEに登録する<span>11月1日の朝、開始のお知らせが届きます</span></div></li>
     <li><div>ページをのぞいてみる<span>体を調べるコース、会社向けのセミナーなどを用意しています</span></div></li>
