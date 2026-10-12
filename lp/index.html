@@ -7,7 +7,7 @@
 <meta property="og:description" content="頑張らなくても、気づいたら体にいいことをしている。11月1日、クラウドファンディング開始。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mm738966m-boop.github.io/nagataka-share/lp/">
-<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/lp/og.png">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/lp/og.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@ h1,h2,h3{text-wrap:balance;margin:0;line-height:1.5;font-weight:700;font-family:
 .wrap{max-width:660px;margin:0 auto;padding:0 22px}
 .draft{background:var(--forest);color:var(--goldsoft);text-align:center;font-size:14px;font-weight:500;padding:6px 10px;line-height:1.5;letter-spacing:.06em}
 /* hero */
-.hero{background:linear-gradient(180deg,#EEF2E8 0%,var(--bg) 100%);padding:56px 0 44px;border-bottom:1px solid var(--hair)}
+.hero{background:linear-gradient(180deg,#EEF2E8 0%,var(--bg) 100%);padding:28px 0 44px;border-bottom:1px solid var(--hair)}
 .hero .date{display:inline-block;color:var(--deep);font-weight:700;font-size:15px;letter-spacing:.12em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:6px 2px}
 .hero h1{font-size:clamp(34px,9.4vw,52px);margin-top:26px;color:var(--forest);line-height:1.55}
 .hero h1 em{font-style:normal;background:linear-gradient(transparent 88%,var(--gold) 88%,var(--gold) 94%,transparent 94%)}
@@ -39,6 +39,13 @@ section{padding:64px 0}
 .kicker::before{content:"";width:28px;height:1px;background:var(--gold)}
 h2{font-size:clamp(25px,6.6vw,32px);margin:12px 0 26px;color:var(--forest)}
 .body p+p{margin-top:18px}
+figure{margin:0}
+.heroimg{margin:0 0 30px;padding:6px;border:1px solid var(--goldsoft);background:var(--paper)}
+.heroimg img,.photo img{display:block;width:100%;height:auto}
+.photo{padding:6px;border:1px solid var(--hair);background:var(--paper)}
+.photo figcaption{font-size:14px;color:var(--muted);text-align:center;padding:8px 0 2px;letter-spacing:.1em}
+.who img.face{width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--goldsoft);padding:3px;background:var(--paper)}
+.last .photo{margin-bottom:36px}
 /* 未来 */
 .scenes{display:flex;flex-direction:column}
 .scene{border-top:1px solid var(--hair);padding:20px 0;display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:center}
@@ -95,14 +102,15 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
 .dock .btn{max-width:620px;margin:0 auto;padding:13px 16px;font-size:16px;box-shadow:none}
 </style></head><body>
 
-<div class="draft">たたき台です（公開前）｜写真はこれから入れます</div>
+<div class="draft">たたき台です（公開前）｜写真は仮選びです</div>
 
 <div class="hero"><div class="wrap">
+  <figure class="heroimg"><img src="img/hero.jpg" alt="緑の中に立つながたか" width="1400" height="931"></figure>
   <span class="date">11月1日（日）クラウドファンディング開始</span>
   <h1>1年中、<br><em>健康診断の前</em><br>みたいな自分で。</h1>
   <p class="sub">頑張らなくても、<br>気づいたら体にいいことをしている。<br>そんな毎日をつくる会社を、<br>立ち上げます。</p>
   <div class="who">
-    <div class="ph">写真<br>（顔）</div>
+    <img class="face" src="img/face.jpg" alt="ながたか（永澤 貴昭）" width="88" height="88">
     <div><b>ながたか（永澤 貴昭）</b><span>大学教員・博士（学術）<br>専門はスポーツ栄養学</span></div>
   </div>
   <a class="btn" href="https://utage-system.com/line/open/qBddu1fxp677?ref=lp"><span>LINEで開始のお知らせを受け取る<small>登録は無料・30秒</small></span></a>
@@ -166,7 +174,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
   <p class="kicker">私について</p>
   <h2>現場で磨いたことを、ふだんの暮らしへ。</h2>
   <div class="me">
-    <div class="ph">写真<br>（授業を後ろから撮った1枚）</div>
+    <figure class="photo"><img src="img/lecture.jpg" alt="講義の様子" loading="lazy" width="1400" height="1050"><figcaption>講義の様子</figcaption></figure>
     <div class="body">
       <p>スポーツの現場で、選手の体づくりを支えてきました。<br>やりがいのある仕事です。</p>
       <p>ただ、届く相手はどうしても限られます。<br>論文や学会で得た知識を、大学の中に置いたままにしたくない。<br>そう考えて、会社という形を選びました。</p>
@@ -187,6 +195,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
 </div></section>
 
 <section class="last" id="line"><div class="wrap">
+  <figure class="photo"><img src="img/rice.jpg" alt="ごはんを手に笑うながたか" loading="lazy" width="1400" height="931"></figure>
+  <p class="kicker">お知らせ</p>
   <h2>始まったら、<br>いちばんにお知らせします。</h2>
   <p>公式LINEに登録しておくと、11月1日の朝に1通届きます。</p>
   <a class="btn" href="https://utage-system.com/line/open/qBddu1fxp677?ref=lp"><span>LINEで開始のお知らせを受け取る<small>登録は無料・30秒</small></span></a>
