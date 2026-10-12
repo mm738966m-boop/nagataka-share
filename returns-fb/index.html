@@ -13,7 +13,7 @@
 --g1:#0E7C86;--g2:#C98A12;--g3:#5B57D6;--g4:#8a949b}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#4fd0c6;--deep:#86e6dc;--gold:#f0c95a;--ink:#e7f0ef;--muted:#a5b6b6;--hair:#2a3a3c;--bg:#10191b;--paper:#182326;--soft:#1d3336;--goldbg:#2f2710;--goldline:#5a4a1c;--g1:#4fd0c6;--g2:#f0b441;--g3:#a29dff;--g4:#9aa5ab}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-weight:500;line-height:1.8;font-size:18px;-webkit-text-size-adjust:100%}
 .page{max-width:700px;margin:0 auto;padding:28px 16px 72px;display:flex;flex-direction:column;gap:18px}
 p,li,dd,summary,.say{text-wrap:pretty;margin:0}
@@ -91,6 +91,16 @@ summary span{font-size:15px;color:var(--muted)}
 .ask p{font-size:17px;line-height:1.65}
 .ask .me{border-color:var(--goldline);background:var(--goldbg)}
 .note{background:var(--soft);border-radius:14px;padding:14px;font-size:17px}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:400px){.plans{grid-template-columns:1fr}}
+.plan{border:2px solid var(--hair);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:2px}
+.plan.hi{border-color:var(--goldline);background:var(--goldbg)}
+.plan .pl{align-self:flex-start;background:var(--deep);color:var(--paper);font-size:14px;font-weight:800;border-radius:999px;padding:1px 12px}
+.plan .pp{font-size:44px;font-weight:800;line-height:1.2;color:var(--deep);font-variant-numeric:tabular-nums}
+.plan .pp small{font-size:18px;margin-left:2px}
+.plan .pn{font-weight:800;font-size:17px}
+.plan ul{margin:6px 0 0;padding-left:1.1em}
+.plan li{font-size:16px;line-height:1.6;margin:2px 0}
 /* 予定 */
 .tl{display:flex;flex-direction:column;margin:0}
 .tl div{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--hair)}
@@ -223,11 +233,40 @@ footer a{color:var(--deep)}
   <h2><span class="n">3</span>会社向けに10万円の入口</h2>
   <p>9/28に「会社は10万円が出しやすい」という話が出ました。<br>
   いま会社が選べる10万円は、音声配信のスポンサー権だけです。</p>
-  <div class="vs">
-    <div><span>企業向けセミナー<br>オンライン</span><b>10万円</b></div><i>＋</i>
-    <div><span>企業向けセミナー<br>対面</span><b>15万円</b></div>
+  <p class="h2sub" style="margin-top:2px">金曜、バッシーさんにそのまま見せられる形（案）</p>
+  <div class="plans">
+    <div class="plan">
+      <span class="pl">オンライン</span>
+      <b class="pp">10<small>万円</small></b>
+      <span class="pn">社員向け健康セミナー</span>
+      <ul>
+        <li>60分・オンライン</li>
+        <li>社内で配れる資料つき</li>
+        <li>テーマは会社に合わせて</li>
+        <li>サイトに社名を掲載</li>
+      </ul>
+    </div>
+    <div class="plan hi">
+      <span class="pl">対面</span>
+      <b class="pp">15<small>万円</small></b>
+      <span class="pn">社員向け健康セミナー</span>
+      <ul>
+        <li>60分・会社へ伺います</li>
+        <li>社内で配れる資料つき</li>
+        <li>その場で質問タイム</li>
+        <li>サイトに社名を掲載</li>
+      </ul>
+    </div>
   </div>
-  <p>この2本に分けておくと、金曜にバッシーさんへ「これならどうですか」と見せられます。</p>
+  <p>どちらも「創業パートナー」としてお名前が残ります。<br>
+  対面は東京・千葉、それ以外は交通費を別でいただく形です。</p>
+  <div class="idea"><span class="lbl">バッシーさんに聞いてみたいこと</span>
+    <ul>
+      <li>会社として出すなら、いくらが出しやすいか</li>
+      <li>オンラインと対面、どちらが社員に喜ばれそうか</li>
+      <li>セミナーで聞きたいテーマは何か</li>
+    </ul>
+  </div>
   <div class="note">3万円の団体向け授業（10名まで）は「部活・サークル・ご家族向け」と書き添えたいです。<br>会社がこちらを選ぶと、セミナーの5分の1で済んでしまうためです。</div>
 </section>
 
