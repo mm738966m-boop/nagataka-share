@@ -15,6 +15,7 @@
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-weight:500;line-height:1.8;font-size:18px;-webkit-text-size-adjust:100%}
 .page{max-width:720px;margin:0 auto;padding:28px 16px 72px;display:flex;flex-direction:column;gap:18px}
 p,li,dd,summary{text-wrap:pretty;margin:0}
+p,li,dd,b,span,small,td{word-break:auto-phrase}
 h1,h2,h3{text-wrap:balance;margin:0;line-height:1.4}
 .eyebrow{font-size:14px;letter-spacing:.12em;color:var(--teal);font-weight:700}
 h1{font-size:clamp(27px,7.2vw,36px);font-weight:800;margin-top:6px}
@@ -78,8 +79,8 @@ h3{font-size:18px;font-weight:800;color:var(--deep)}
 .day b:first-child,.day b:first-child+span{border-top:0;padding-top:0}
 /* 通数 */
 .tbl{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:17px;min-width:330px}
-th,td{padding:9px 8px;border-bottom:1px solid var(--hair);text-align:center;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:16.5px}
+th,td{padding:9px 4px;border-bottom:1px solid var(--hair);text-align:center;font-variant-numeric:tabular-nums}
 th{background:var(--soft);font-size:14.5px}
 td:first-child,th:first-child{text-align:left;font-weight:800}
 td.ok{color:#058a3c;font-weight:800}td.ng{color:var(--warn);font-weight:800;background:var(--warnbg)}
@@ -199,7 +200,7 @@ footer a{color:var(--deep)}
   <h2><span class="n">4</span>通数とお金</h2>
   <p>LINE公式は、無料だと<b>月200通</b>までです。<br>数え方は「送った人数 × 送った回数」。</p>
   <div class="tbl"><table>
-    <tr><th>登録の人数</th><th>10月<br>2回</th><th>11月<br>4回</th><th>12月<br>4回</th></tr>
+    <tr><th>登録</th><th>10月<br>2回</th><th>11月<br>4回</th><th>12月<br>4回</th></tr>
     <tr><td>50人</td><td class="ok">100</td><td class="ok">200</td><td class="ok">200</td></tr>
     <tr><td>100人</td><td class="ok">200</td><td class="ng">400</td><td class="ng">400</td></tr>
     <tr><td>150人</td><td class="ng">300</td><td class="ng">600</td><td class="ng">600</td></tr>
