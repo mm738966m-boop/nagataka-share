@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI食事分析の指示書｜ながたか・起業共創プロジェクト</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="AIで食事を分析する仕組み 指示書（たたき台）">
+<meta property="og:description" content="Claudeにそのまま貼れる指示書と、進め方・準備するもの。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mm738966m-boop.github.io/nagataka-share/ai-shokuji/">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/ai-shokuji/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--teal:#0E7C86;--deep:#0A5A62;--gold:#B8860B;--ink:#1c2a2e;--muted:#566469;--hair:#dfe7e7;--bg:#f3f7f6;--paper:#fff;--soft:#e3f1f0;--goldbg:#fbf3dc;--goldline:#ecd9a0;--line:#06C755;--linebg:#e6f9ee;--warn:#b4460f;--warnbg:#fff3ea;--warnline:#f6d4b4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#4fd0c6;--deep:#86e6dc;--gold:#f0c95a;--ink:#e7f0ef;--muted:#a5b6b6;--hair:#2a3a3c;--bg:#10191b;--paper:#182326;--soft:#1d3336;--goldbg:#2f2710;--goldline:#5a4a1c;--line:#35d67a;--linebg:#143024;--warn:#ffb277;--warnbg:#33210f;--warnline:#54371b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-weight:500;line-height:1.8;font-size:18px;-webkit-text-size-adjust:100%}
+.page{max-width:720px;margin:0 auto;padding:28px 16px 72px;display:flex;flex-direction:column;gap:18px}
+p,li,dd,summary{text-wrap:pretty;margin:0}
+p,li,dd,b,span,small,td{word-break:auto-phrase}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.4}
+.eyebrow{font-size:14px;letter-spacing:.12em;color:var(--teal);font-weight:700}
+h1{font-size:clamp(27px,7.2vw,36px);font-weight:800;margin-top:6px}
+.lead{color:var(--muted);margin-top:10px}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;background:var(--bg);padding:8px 16px;margin:0 -16px;border-bottom:1px solid var(--hair);scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;white-space:nowrap;font-size:14px;font-weight:700;color:var(--muted);background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:6px 13px}
+section{background:var(--paper);border:1px solid var(--hair);border-radius:18px;padding:22px 18px;display:flex;flex-direction:column;gap:14px;scroll-margin-top:56px}
+h2{font-size:22px;font-weight:800;display:flex;align-items:center;gap:10px}
+h2 .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-size:17px}
+h3{font-size:18px;font-weight:800;color:var(--deep)}
+.sub{color:var(--muted);font-size:16px;margin-top:-8px}
+/* 1枚の地図 */
+.mapflow{display:flex;flex-direction:column;align-items:stretch;gap:0}
+.node{border-radius:16px;padding:14px 16px;border:2px solid var(--hair);background:var(--paper)}
+.node small{display:block;font-size:13.5px;font-weight:800;letter-spacing:.08em;color:var(--teal)}
+.node b{display:block;font-size:20px;font-weight:800;line-height:1.45}
+.node span{display:block;font-size:15.5px;color:var(--muted);line-height:1.65}
+.node.in{background:var(--soft);border-color:transparent}
+.node.lp{border-color:var(--teal)}
+.node.ln{background:var(--linebg);border-color:var(--line)}
+.node.ln small{color:#058a3c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .node.ln small{color:var(--line)}}
+.node.go{background:var(--deep);border-color:var(--deep);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .node.go{background:#0d4a50;border-color:#0d4a50}}
+.node.go small{color:#bfe9e4}.node.go span{color:#e3f1f0}
+.node.af{background:var(--goldbg);border-color:var(--goldline)}
+.node.af small{color:var(--gold)}
+.arrow{align-self:center;width:2px;height:22px;background:var(--teal);position:relative;margin:2px 0 8px}
+.arrow::after{content:"";position:absolute;left:-5px;bottom:-6px;border:6px solid transparent;border-top-color:var(--teal);border-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips i{font-style:normal;font-size:14px;font-weight:700;background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:2px 11px;color:var(--ink)}
+/* 登録直後 */
+.phone{background:#8fb7d9;border-radius:22px;padding:16px 12px;display:flex;flex-direction:column;gap:10px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .phone{background:#2b4257}}
+.bub{align-self:flex-start;max-width:88%;background:#fff;color:#1c2a2e;border-radius:4px 18px 18px 18px;padding:10px 14px;font-size:16px;line-height:1.7}
+.bub.voice{display:flex;align-items:center;gap:10px;font-weight:700}
+.bub.voice::before{content:"";width:0;height:0;border:9px solid transparent;border-left:14px solid #06C755;margin-left:4px}
+.bub.voice span{flex:1;height:4px;border-radius:2px;background:linear-gradient(90deg,#06C755 30%,#d6dde0 30%)}
+.qr{display:flex;flex-direction:column;gap:6px;align-self:stretch;margin-top:2px}
+.qr i{font-style:normal;text-align:center;background:#fff;color:#0A5A62;border:2px solid #06C755;border-radius:999px;padding:7px 10px;font-weight:800;font-size:15.5px}
+.three{display:grid;grid-template-columns:1fr;gap:8px}
+.three div{border-left:5px solid var(--teal);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 14px}
+.three b{display:block;font-weight:800}
+.three span{display:block;font-size:15.5px;color:var(--muted);line-height:1.65}
+/* カレンダー */
+.cal{display:flex;flex-direction:column;margin:0}
+.cal>div{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--hair)}
+.cal>div:first-child{border-top:0;padding-top:0}
+.cal dt{font-weight:800;color:var(--deep);font-variant-numeric:tabular-nums;line-height:1.5}
+.cal dd{margin:0;line-height:1.65}
+.cal dd small{display:block;font-size:14.5px;color:var(--muted)}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;border-radius:6px;padding:0 8px;margin-right:6px;line-height:1.8;vertical-align:1px}
+.tag.l{background:var(--linebg);color:#058a3c}.tag.v{background:var(--soft);color:var(--deep)}.tag.c{background:var(--goldbg);color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.l{color:var(--line)}}
+.cal .peak{background:var(--goldbg);border:1px solid var(--goldline);border-radius:14px;padding:12px;margin:4px -6px}
+/* 24時間 */
+.day{display:grid;grid-template-columns:62px 1fr;gap:0 12px}
+.day b{grid-column:1;font-variant-numeric:tabular-nums;font-weight:800;color:var(--teal);padding:10px 0;border-top:1px solid var(--hair)}
+.day span{grid-column:2;padding:10px 0;border-top:1px solid var(--hair);line-height:1.6}
+.day b:first-child,.day b:first-child+span{border-top:0;padding-top:0}
+/* 通数 */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:16.5px}
+th,td{padding:9px 4px;border-bottom:1px solid var(--hair);text-align:center;font-variant-numeric:tabular-nums}
+th{background:var(--soft);font-size:14.5px}
+td:first-child,th:first-child{text-align:left;font-weight:800}
+td.ok{color:#058a3c;font-weight:800}td.ng{color:var(--warn);font-weight:800;background:var(--warnbg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) td.ok{color:var(--line)}}
+.reco{background:var(--deep);color:#fff;border-radius:16px;padding:16px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .reco{background:#0d4a50}}
+.reco b{display:block;font-size:20px;font-weight:800;line-height:1.5}
+.reco span{display:block;font-size:16px;opacity:.92}
+.note{background:var(--soft);border-radius:14px;padding:14px;font-size:17px}
+.warn{background:var(--warnbg);border:1px solid var(--warnline);border-radius:14px;padding:14px;font-size:17px}
+.warn b{color:var(--warn)}
+/* 役割 */
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:460px){.roles{grid-template-columns:1fr}}
+.roles div{border:1px solid var(--hair);border-radius:14px;padding:12px 14px}
+.roles b{display:block;font-weight:800;font-size:18px}
+.roles span{display:block;font-size:15.5px;color:var(--muted);line-height:1.65}
+.roles .ln{background:var(--linebg);border-color:var(--line)}
+/* 読み手 */
+.per{display:flex;flex-direction:column;gap:10px}
+.per div{border:1px solid var(--hair);border-radius:14px;padding:12px 14px}
+.per b{display:block;font-weight:800}
+.per span{display:block;font-size:16px;line-height:1.7}
+.per em{font-style:normal;display:block;font-size:15.5px;color:var(--teal);font-weight:700;margin-top:4px}
+/* 決める */
+.chk{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;line-height:1.65}
+.chk li::before{content:"";width:17px;height:17px;border:2px solid var(--teal);border-radius:4px;margin-top:6px}
+.chk li span{display:block;font-size:15px;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:14px}
+footer a{color:var(--deep)}
+
+.prompt{background:#13262a;color:#e6f0ef;border-radius:14px;padding:16px;max-height:460px;overflow:auto}
+.prompt pre{margin:0;font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:15px;line-height:1.85;white-space:pre-wrap;word-break:auto-phrase}
+.copy{align-self:flex-start;font:inherit;font-size:16px;font-weight:800;color:#fff;background:linear-gradient(180deg,#19d868,#06C755 50%,#05A948);border:0;border-radius:999px;padding:12px 22px;cursor:pointer;min-height:48px;box-shadow:0 8px 18px -10px rgba(6,199,85,.8)}
+.copy.done{background:#0A5A62}
+.steps3{counter-reset:s;list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.steps3 li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;line-height:1.7}
+.steps3 li::before{content:counter(s);width:36px;height:36px;border-radius:50%;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-weight:800}
+.steps3 li span{display:block;font-size:15.5px;color:var(--muted)}
+.phase{display:flex;flex-direction:column;gap:0}
+.phase>div{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--hair)}
+.phase>div:first-child{border-top:0;padding-top:0}
+.phase b.p{font-weight:800;color:var(--teal);font-size:15px;line-height:1.5}
+.phase b.t{display:block;font-weight:800}
+.phase span{display:block;font-size:15.5px;color:var(--muted);line-height:1.7}
+.shot{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.shot div{border:1px solid var(--hair);border-radius:14px;padding:12px;text-align:center}
+.shot svg{width:100%;max-width:150px;height:auto}
+.shot b{display:block;font-weight:800;font-size:16px}
+.shot span{display:block;font-size:14.5px;color:var(--muted);line-height:1.6}
+</style></head><body><div class="page">
+
+<header>
+  <div class="eyebrow">2026.10.16 ／ 森川より</div>
+  <h1>AIで食事を分析する仕組み<br>指示書（たたき台）</h1>
+  <p class="lead">Claudeにそのまま貼れる指示書です。<br>最初から完璧を目指さず、AIと話しながら育てていく前提で書きました。</p>
+</header>
+
+<nav>
+  <a href="#how">使い方</a><a href="#prompt">指示書</a><a href="#prep">準備するもの</a><a href="#phase">進め方</a><a href="#care">気をつけること</a>
+</nav>
+
+<section id="how">
+  <h2>使い方（3ステップ）</h2>
+  <ol class="steps3">
+    <li><div>パソコンで、新しいフォルダを1つ作る<span>例：「食事分析」。ここに写真や成分表も入れていきます</span></div></li>
+    <li><div>Claude Codeを、そのフォルダで開く<span>使うモデルは、最初の設計の相談だけFableで。そのあとはOpusで十分です</span></div></li>
+    <li><div>下の指示書をコピーして貼る<span>「過去の反省」に、前のサイトのリンクを入れてから送ってください</span></div></li>
+  </ol>
+  <div class="note">AIから質問が返ってきたら、思ったことをそのまま話すように答えればOKです。<br>音声入力で「ふわっと」話しても伝わります。</div>
+</section>
+
+<section id="prompt">
+  <h2>指示書</h2>
+  <div class="prompt"><pre id="ptext"># 依頼：食事の写真から栄養を推定する仕組みをつくりたい
+
+## 私について
+大学で栄養と身体活動を教えています（博士・スポーツ栄養学）。
+食事調査を、研究と仕事の両方で使っています。
+プログラミングは初心者です。専門用語は、かみくだいて説明してください。
+
+## つくりたいもの（最終的な形）
+1. 利用者が、食事の写真をスマホからアップロードする（1人あたり3日間ほど）
+2. AIが写真から、料理名・食材・それぞれの重さ（g）を推定する
+3. 日本食品標準成分表（最新版）を使って、エネルギー・たんぱく質・脂質・炭水化物・食物繊維・食塩相当量・主なビタミンとミネラルを計算する
+4. 私が推定結果を画面で確認し、食材やグラム数を直す
+5. 直した記録（AIの推定と、私の正解の差）を貯めて、次の推定の参考例として使い、少しずつ精度を上げる
+6. 1人分の結果をレポートにまとめて、利用者に渡す（印刷できるページかPDF）
+
+## 精度を上げるための前提
+- 撮影のルール：真上から1枚、斜め45度から1枚。定規や名刺など、大きさの目安になる物を一緒に写す
+- 利用者は、料理名と「写真では見えない材料」（汁物の具、揚げ物の中身、使った調味料）をひとことメモで書く
+- AIは、分からない点を推測で埋めずに「確認したいこと」として出す
+- 推定には幅を持たせ、自信の低い食材には印をつける
+- 日本の家庭料理は具材が隠れやすい（炒め物の下の肉、味噌汁の沈んだ具など）。その前提で設計する
+
+## 段階を分けて進めたい
+- 第1段階：私のパソコンだけで動く試作。写真を入れる → 推定 → 私が直す → 保存、まで
+- 第2段階：成分表での栄養計算と、レポートの出力
+- 第3段階：利用者ごとのアップロード用ページ（期間を区切って使える形）
+- 第4段階：研究用に、データを表計算ソフトで開ける形で書き出す
+
+## 過去の反省
+以前、外部の方に約20万円で食事記録のサイトを作ってもらいました。
+写真と食べた物を入力するだけで、解析はすべて手作業でした。
+リンク：（ここに貼ります）
+何がうまくいかなかったのかも、一緒に整理してください。
+
+## 守りたいこと
+- 食事の写真は個人情報です。保存場所と、AIに写真を送ることへの同意の取り方を、最初に提案してください
+- 大学の予算や設備は使いません。個人の事業として作ります
+- 病気の診断や治療の判断はしません。栄養の目安と助言にとどめます
+- 費用（AIの利用料・サーバー代など）を、段階ごとに見積もってください
+
+## 最初にやってほしいこと
+いきなり作り始めず、まず次の3つを出してください。
+1. 第1段階の画面の流れ（文章と簡単な図で）
+2. 必要な道具と、私が準備するもの
+3. 私に確認したい質問（5つまで）</pre></div>
+  <button class="copy" id="cp" type="button">指示書をコピーする</button>
+</section>
+
+<section id="prep">
+  <h2>準備しておくもの</h2>
+  <ul style="margin:0;padding-left:1.2em">
+    <li><b>日本食品標準成分表（最新版）</b><br><span style="font-size:15.5px;color:var(--muted)">文部科学省のサイトからExcelでダウンロードできます</span></li>
+    <li><b>前に作った食事記録サイトのリンク</b></li>
+    <li><b>答え合わせ用の食事 10食分</b><br><span style="font-size:15.5px;color:var(--muted)">量をはかって作った食事の写真と、正しい重さ・栄養の値。<br>AIの推定がどれくらいずれるかを測る「ものさし」になります</span></li>
+  </ul>
+  <h3>撮影のルール（利用者にお願いすること）</h3>
+  <div class="shot">
+    <div><svg viewBox="0 0 120 90" fill="none" stroke="#0E7C86" stroke-width="2.5" stroke-linecap="round"><circle cx="60" cy="50" r="28" fill="#e3f1f0"/><circle cx="60" cy="50" r="14"/><rect x="18" y="80" width="84" height="6" rx="2" fill="#f0c95a" stroke="none"/><path d="M60 4v12M54 10l6 6 6-6"/></svg><b>真上から1枚</b><span>お皿全体が入るように</span></div>
+    <div><svg viewBox="0 0 120 90" fill="none" stroke="#0E7C86" stroke-width="2.5" stroke-linecap="round"><ellipse cx="62" cy="58" rx="32" ry="14" fill="#e3f1f0"/><path d="M34 58c4-14 52-14 56 0"/><rect x="18" y="78" width="84" height="6" rx="2" fill="#f0c95a" stroke="none"/><path d="M14 14l14 14M20 28h8v-8"/></svg><b>斜め45度から1枚</b><span>高さや、盛りの量が分かるように</span></div>
+  </div>
+  <div class="note">どちらも、<b>定規や名刺など大きさの目安</b>を横に置きます。<br>料理名と「見えない材料」（汁物の具・揚げ物の中身・調味料）をひとことメモで。</div>
+</section>
+
+<section id="phase">
+  <h2>進め方の目安</h2>
+  <div class="phase">
+    <div><b class="p">第1段階</b><div><b class="t">自分のパソコンで試作</b><span>写真を入れて、推定して、直して、保存する。<br>答え合わせ用の10食で、ずれを測る</span></div></div>
+    <div><b class="p">第2段階</b><div><b class="t">栄養計算とレポート</b><span>成分表で計算し、1人分の結果を1枚にまとめる</span></div></div>
+    <div><b class="p">第3段階</b><div><b class="t">利用者のアップロード用ページ</b><span>リターンの「からだ分析」で使える形に（3日間など期間を区切る）</span></div></div>
+    <div><b class="p">第4段階</b><div><b class="t">研究用の書き出し</b><span>表計算ソフトで開ける形に</span></div></div>
+  </div>
+  <div class="note">直した記録が増えるほど、AIの推定は良くなっていきます。<br>ながたかさんの「正解」が、この仕組みのいちばんの財産になります。</div>
+</section>
+
+<section id="care">
+  <h2>気をつけること</h2>
+  <div class="warn"><b>個人情報</b><br>食事の写真は個人情報です。<br>保存する場所と、AIに写真を送ることへの同意を、利用者からきちんともらいます。</div>
+  <div class="warn"><b>大学とのすみ分け</b><br>大学の予算や設備は使わず、個人の事業として作ります。<br>研究で使うときは、大学の決まり（倫理審査など）に合わせます。</div>
+  <div class="warn"><b>言い切らない</b><br>病気の診断や治療の判断はしません。<br>栄養の目安と、毎日の工夫の助言にとどめます。</div>
+  <div class="warn"><b>費用</b><br>Claudeの月額とは別に、仕組みとして動かすとAIの利用料がかかることがあります。<br>段階ごとに見積もってもらってから進めます。</div>
+</section>
+
+<section>
+  <h2>このあと</h2>
+  <p>AIとのやりとりの途中経過を、LINEグループに貼ってもらえれば、森川も一緒に見ます。<br>次は、献立の仕組み（冷蔵庫の残り物から献立を出す）の指示書も用意します。</p>
+</section>
+
+<footer>ながたか・起業共創プロジェクト<br>
+<a href="../1014/">10/14議事録</a>　·　<a href="../line-plan/">公式LINEの配信一覧</a>　·　<a href="../map/">戦略マップ</a></footer>
+</div>
+<script>
+document.getElementById('cp').addEventListener('click',function(){var b=this,t=document.getElementById('ptext').innerText;
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){b.textContent='コピーしました';b.classList.add('done');setTimeout(function(){b.textContent='指示書をコピーする';b.classList.remove('done')},1800)})}});
+</script>
+</body></html>

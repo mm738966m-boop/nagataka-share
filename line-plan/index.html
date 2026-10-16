@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公式LINE 配信の一覧｜ながたか・起業共創プロジェクト</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="公式LINEで送る内容と、声で話すことのたたき台">
+<meta property="og:description" content="登録直後から12/16のお礼まで、12通。文面と、声で話す順番をまとめました。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mm738966m-boop.github.io/nagataka-share/line-plan/">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/line-plan/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--teal:#0E7C86;--deep:#0A5A62;--gold:#B8860B;--ink:#1c2a2e;--muted:#566469;--hair:#dfe7e7;--bg:#f3f7f6;--paper:#fff;--soft:#e3f1f0;--goldbg:#fbf3dc;--goldline:#ecd9a0;--line:#06C755;--linebg:#e6f9ee;--warn:#b4460f;--warnbg:#fff3ea;--warnline:#f6d4b4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#4fd0c6;--deep:#86e6dc;--gold:#f0c95a;--ink:#e7f0ef;--muted:#a5b6b6;--hair:#2a3a3c;--bg:#10191b;--paper:#182326;--soft:#1d3336;--goldbg:#2f2710;--goldline:#5a4a1c;--line:#35d67a;--linebg:#143024;--warn:#ffb277;--warnbg:#33210f;--warnline:#54371b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-weight:500;line-height:1.8;font-size:18px;-webkit-text-size-adjust:100%}
+.page{max-width:720px;margin:0 auto;padding:28px 16px 72px;display:flex;flex-direction:column;gap:18px}
+p,li,dd,summary{text-wrap:pretty;margin:0}
+p,li,dd,b,span,small,td{word-break:auto-phrase}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.4}
+.eyebrow{font-size:14px;letter-spacing:.12em;color:var(--teal);font-weight:700}
+h1{font-size:clamp(27px,7.2vw,36px);font-weight:800;margin-top:6px}
+.lead{color:var(--muted);margin-top:10px}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;background:var(--bg);padding:8px 16px;margin:0 -16px;border-bottom:1px solid var(--hair);scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;white-space:nowrap;font-size:14px;font-weight:700;color:var(--muted);background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:6px 13px}
+section{background:var(--paper);border:1px solid var(--hair);border-radius:18px;padding:22px 18px;display:flex;flex-direction:column;gap:14px;scroll-margin-top:56px}
+h2{font-size:22px;font-weight:800;display:flex;align-items:center;gap:10px}
+h2 .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-size:17px}
+h3{font-size:18px;font-weight:800;color:var(--deep)}
+.sub{color:var(--muted);font-size:16px;margin-top:-8px}
+/* 1枚の地図 */
+.mapflow{display:flex;flex-direction:column;align-items:stretch;gap:0}
+.node{border-radius:16px;padding:14px 16px;border:2px solid var(--hair);background:var(--paper)}
+.node small{display:block;font-size:13.5px;font-weight:800;letter-spacing:.08em;color:var(--teal)}
+.node b{display:block;font-size:20px;font-weight:800;line-height:1.45}
+.node span{display:block;font-size:15.5px;color:var(--muted);line-height:1.65}
+.node.in{background:var(--soft);border-color:transparent}
+.node.lp{border-color:var(--teal)}
+.node.ln{background:var(--linebg);border-color:var(--line)}
+.node.ln small{color:#058a3c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .node.ln small{color:var(--line)}}
+.node.go{background:var(--deep);border-color:var(--deep);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .node.go{background:#0d4a50;border-color:#0d4a50}}
+.node.go small{color:#bfe9e4}.node.go span{color:#e3f1f0}
+.node.af{background:var(--goldbg);border-color:var(--goldline)}
+.node.af small{color:var(--gold)}
+.arrow{align-self:center;width:2px;height:22px;background:var(--teal);position:relative;margin:2px 0 8px}
+.arrow::after{content:"";position:absolute;left:-5px;bottom:-6px;border:6px solid transparent;border-top-color:var(--teal);border-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips i{font-style:normal;font-size:14px;font-weight:700;background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:2px 11px;color:var(--ink)}
+/* 登録直後 */
+.phone{background:#8fb7d9;border-radius:22px;padding:16px 12px;display:flex;flex-direction:column;gap:10px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .phone{background:#2b4257}}
+.bub{align-self:flex-start;max-width:88%;background:#fff;color:#1c2a2e;border-radius:4px 18px 18px 18px;padding:10px 14px;font-size:16px;line-height:1.7}
+.bub.voice{display:flex;align-items:center;gap:10px;font-weight:700}
+.bub.voice::before{content:"";width:0;height:0;border:9px solid transparent;border-left:14px solid #06C755;margin-left:4px}
+.bub.voice span{flex:1;height:4px;border-radius:2px;background:linear-gradient(90deg,#06C755 30%,#d6dde0 30%)}
+.qr{display:flex;flex-direction:column;gap:6px;align-self:stretch;margin-top:2px}
+.qr i{font-style:normal;text-align:center;background:#fff;color:#0A5A62;border:2px solid #06C755;border-radius:999px;padding:7px 10px;font-weight:800;font-size:15.5px}
+.three{display:grid;grid-template-columns:1fr;gap:8px}
+.three div{border-left:5px solid var(--teal);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 14px}
+.three b{display:block;font-weight:800}
+.three span{display:block;font-size:15.5px;color:var(--muted);line-height:1.65}
+/* カレンダー */
+.cal{display:flex;flex-direction:column;margin:0}
+.cal>div{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--hair)}
+.cal>div:first-child{border-top:0;padding-top:0}
+.cal dt{font-weight:800;color:var(--deep);font-variant-numeric:tabular-nums;line-height:1.5}
+.cal dd{margin:0;line-height:1.65}
+.cal dd small{display:block;font-size:14.5px;color:var(--muted)}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;border-radius:6px;padding:0 8px;margin-right:6px;line-height:1.8;vertical-align:1px}
+.tag.l{background:var(--linebg);color:#058a3c}.tag.v{background:var(--soft);color:var(--deep)}.tag.c{background:var(--goldbg);color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.l{color:var(--line)}}
+.cal .peak{background:var(--goldbg);border:1px solid var(--goldline);border-radius:14px;padding:12px;margin:4px -6px}
+/* 24時間 */
+.day{display:grid;grid-template-columns:62px 1fr;gap:0 12px}
+.day b{grid-column:1;font-variant-numeric:tabular-nums;font-weight:800;color:var(--teal);padding:10px 0;border-top:1px solid var(--hair)}
+.day span{grid-column:2;padding:10px 0;border-top:1px solid var(--hair);line-height:1.6}
+.day b:first-child,.day b:first-child+span{border-top:0;padding-top:0}
+/* 通数 */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:16.5px}
+th,td{padding:9px 4px;border-bottom:1px solid var(--hair);text-align:center;font-variant-numeric:tabular-nums}
+th{background:var(--soft);font-size:14.5px}
+td:first-child,th:first-child{text-align:left;font-weight:800}
+td.ok{color:#058a3c;font-weight:800}td.ng{color:var(--warn);font-weight:800;background:var(--warnbg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) td.ok{color:var(--line)}}
+.reco{background:var(--deep);color:#fff;border-radius:16px;padding:16px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .reco{background:#0d4a50}}
+.reco b{display:block;font-size:20px;font-weight:800;line-height:1.5}
+.reco span{display:block;font-size:16px;opacity:.92}
+.note{background:var(--soft);border-radius:14px;padding:14px;font-size:17px}
+.warn{background:var(--warnbg);border:1px solid var(--warnline);border-radius:14px;padding:14px;font-size:17px}
+.warn b{color:var(--warn)}
+/* 役割 */
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:460px){.roles{grid-template-columns:1fr}}
+.roles div{border:1px solid var(--hair);border-radius:14px;padding:12px 14px}
+.roles b{display:block;font-weight:800;font-size:18px}
+.roles span{display:block;font-size:15.5px;color:var(--muted);line-height:1.65}
+.roles .ln{background:var(--linebg);border-color:var(--line)}
+/* 読み手 */
+.per{display:flex;flex-direction:column;gap:10px}
+.per div{border:1px solid var(--hair);border-radius:14px;padding:12px 14px}
+.per b{display:block;font-weight:800}
+.per span{display:block;font-size:16px;line-height:1.7}
+.per em{font-style:normal;display:block;font-size:15.5px;color:var(--teal);font-weight:700;margin-top:4px}
+/* 決める */
+.chk{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.chk li{display:grid;grid-template-columns:24px 1fr;gap:8px;line-height:1.65}
+.chk li::before{content:"";width:17px;height:17px;border:2px solid var(--teal);border-radius:4px;margin-top:6px}
+.chk li span{display:block;font-size:15px;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:14px}
+footer a{color:var(--deep)}
+
+.msgcard{border:1px solid var(--hair);border-radius:16px;overflow:hidden}
+.msgcard>summary{list-style:none;cursor:pointer;padding:14px 44px 14px 14px;position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start}
+.msgcard>summary::-webkit-details-marker{display:none}
+.msgcard>summary::after{content:"";position:absolute;right:18px;top:24px;width:10px;height:10px;border-right:3px solid var(--teal);border-bottom:3px solid var(--teal);transform:rotate(45deg);transition:transform .2s}
+.msgcard[open]>summary::after{transform:translateY(5px) rotate(-135deg)}
+.msgcard .no{grid-row:span 2;width:38px;height:38px;border-radius:50%;background:var(--teal);color:var(--paper);display:grid;place-items:center;font-weight:800;font-size:16px}
+.msgcard.peak .no{background:var(--gold)}
+.msgcard .when{font-weight:800;font-size:17px;line-height:1.5}
+.msgcard .meta{display:flex;flex-wrap:wrap;gap:6px}
+.msgcard .meta i{font-style:normal;font-size:13px;font-weight:800;border-radius:6px;padding:0 8px;line-height:1.8;background:var(--soft);color:var(--deep)}
+.msgcard .meta i.v{background:var(--goldbg);color:var(--gold)}
+.msgcard .meta i.l{background:var(--linebg);color:#058a3c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msgcard .meta i.l{color:var(--line)}}
+.inner{border-top:1px solid var(--hair);padding:14px;display:flex;flex-direction:column;gap:12px}
+.inner h4{margin:0;font-size:15px;font-weight:800;color:var(--teal);letter-spacing:.06em}
+.txt{position:relative;background:#8fb7d9;border-radius:16px;padding:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .txt{background:#2b4257}}
+.txt pre{margin:0;background:#fff;color:#1c2a2e;border-radius:4px 14px 14px 14px;padding:12px 14px;font-family:inherit;font-size:16px;line-height:1.75;white-space:pre-wrap;word-break:auto-phrase}
+.copy{align-self:flex-start;font:inherit;font-size:14px;font-weight:800;color:var(--deep);background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:5px 14px;cursor:pointer;min-height:36px}
+.copy.done{background:var(--linebg);border-color:var(--line)}
+.voice{background:var(--goldbg);border:1px solid var(--goldline);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.voice .goal{font-weight:800}
+.voice ol{margin:0;padding-left:1.3em}
+.voice li{margin:3px 0;font-size:16.5px}
+.voice .sm{font-size:15px;color:var(--muted)}
+.sum{width:100%;border-collapse:collapse;font-size:15.5px}
+.sum th,.sum td{padding:8px 4px;border-bottom:1px solid var(--hair);text-align:left;vertical-align:top}
+.sum th{background:var(--soft);font-size:14px}
+.sum td:first-child{font-weight:800;white-space:nowrap;color:var(--deep)}
+</style></head><body><div class="page">
+
+<header>
+  <div class="eyebrow">2026.10.16 ／ 森川より</div>
+  <h1>公式LINEで送る内容と、<br>声で話すこと</h1>
+  <p class="lead">登録した直後から、12/16のお礼まで、12通。<br>文面はたたき台です。<br>ながたかさんの言い方に、自由に直してください。</p>
+</header>
+
+<nav>
+  <a href="#sum">全体</a><a href="#list">12通の中身</a><a href="#rec">声の録り方</a><a href="#set">設定のこと</a>
+</nav>
+
+<section id="sum">
+  <h2>全体の流れ</h2>
+  <table class="sum">
+    <tr><th>いつ</th><th>誰に・何を</th></tr>
+    <tr><td>登録直後</td><td>全員：お礼＋声60秒＋ひとつ質問</td></tr>
+    <tr><td>10/20</td><td>全員：会社をつくる理由（声2分）</td></tr>
+    <tr><td>10/31</td><td>全員：明日の朝、始まります</td></tr>
+    <tr><td>11/1 朝</td><td>全員：始まりました（声30秒）</td></tr>
+    <tr><td>11/1 夜</td><td>まだの方：初日のお礼と途中経過</td></tr>
+    <tr><td>11/10</td><td>会社の方：セミナーのご案内</td></tr>
+    <tr><td>11/15</td><td>まだの方：途中経過（声1〜2分）</td></tr>
+    <tr><td>11月後半</td><td>まだの方：新しいリターン</td></tr>
+    <tr><td>12/8</td><td>まだの方：残り1週間</td></tr>
+    <tr><td>12/13</td><td>まだの方：残り2日</td></tr>
+    <tr><td>12/15 朝</td><td>まだの方：最終日（声30秒）</td></tr>
+    <tr><td>12/16</td><td>全員：お礼と結果（声1〜2分）</td></tr>
+  </table>
+  <div class="note">「まだの方」＝応援が済んでいない方。<br>メニューの「応援しました」を押した方には、お願いの配信を止めます。<br>同じお願いを何度も受け取らずに済み、通数の節約にもなります。</div>
+  <div class="note">声が入るのは6回（登録直後・10/20・11/1・11/15・12/15・12/16）。<br>録るのは、まず<b>登録直後の60秒</b>と<b>10/20の2分</b>の2本です。</div>
+</section>
+
+<section id="list">
+  <h2>12通の中身</h2>
+  <p class="sub" style="margin-top:0">押すと開きます。<br>文面はボタンでコピーできます。</p>
+  <details class="msgcard peak" open>
+<summary><span class="no">1</span><span class="when">登録した直後</span><span class="meta"><i class="l">文章</i><i class="v">声 60秒</i><i>全員</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">安心してもらう。<br>次に何が届くかを伝える。<br>LINEの「あいさつメッセージ」で送るので、通数に数えられません。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>登録ありがとうございます！
+ながたかです。
+
+11月1日（日）の朝に、
+クラウドファンディング開始のお知らせを1通お送りします。
+
+それまで、何もしなくて大丈夫です。
+登録しただけで、支援になることはありません。
+
+60秒だけ、声でごあいさつさせてください。
+（音声）
+
+ひとつだけ教えてください。
+近いものを押してもらえると助かります。
+［個人として応援したい］
+［会社・団体の立場で知りたい］
+［まずは様子を見たい］</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+<div class="voice"><h4>声で話すこと（60秒）</h4>
+<p class="goal">ゴール：「この人の話をもう少し聞いてみたい」と思ってもらう</p>
+<ol><li>登録のお礼（ひとこと）</li><li>自分は何者か（大学で栄養と身体の動かし方を教えている）</li><li>なぜ会社をつくるのか（授業のあと、学生が全員エレベーターに乗った話を短く）</li><li>11/1の朝にお知らせが届くこと</li></ol>
+<p class="sm">入れたい一言：「頑張らなくても、気づいたら身体にいいことをしている。そんな毎日をつくりたい」<br>避けること：支援のお願い、金額の話</p></div>
+</div></details>
+<details class="msgcard">
+<summary><span class="no">2</span><span class="when">10/20（火）20:00</span><span class="meta"><i class="v">声 2分</i><i class="l">文章</i><i>全員</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">公開までに、熱を少しずつためる。<br>会社をつくる理由を、ご本人の声で。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>こんばんは、ながたかです。
+今日は、なぜ会社をつくるのかを、声で話してみました。
+
+2分ほどです。
+通勤の途中や、家事をしながら聞いてもらえたらうれしいです。
+（音声）
+
+11月1日の朝、また1通お送りします。</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+<div class="voice"><h4>声で話すこと（2分）</h4>
+<p class="goal">ゴール：「応援したい理由」を持ってもらう</p>
+<ol><li>大学の中にある知識が、暮らしに届いていないと感じたこと</li><li>「正しいことを伝えるだけでは、人は動かない」と気づいた場面</li><li>会社でやりたいこと（食事と身体活動を、ひとつながりで見る）</li><li>教え子が学んだことを仕事にできる場所にもしたい</li></ol>
+<p class="sm">入れたい一言：「ジムに通わなくても、毎日の動きを少し工夫するところから」<br>避けること：「必ず健康になる」「病気を防ぐ」のような言い切り</p></div>
+</div></details>
+<details class="msgcard">
+<summary><span class="no">3</span><span class="when">10/31（土）20:00</span><span class="meta"><i class="l">文章</i><i>全員</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">明日の予告。<br>CAMPFIREの会員登録を先に済ませてもらう。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>こんばんは、ながたかです。
+いよいよ明日の朝、始まります。
+
+正直、どきどきしています。
+
+先に準備しておきたい方へ。
+CAMPFIREの会員登録（無料）を済ませておくと、明日がスムーズです。
+https://camp-fire.jp/
+
+明日の朝7時に、また1通お送りします。</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+
+</div></details>
+<details class="msgcard peak">
+<summary><span class="no">4</span><span class="when">11/1（日）7:00</span><span class="meta"><i class="l">文章</i><i class="v">声 30秒</i><i>全員</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">公開の合図。<br>いちばん大事な1通。<br>ボタンは1つだけにして迷わせない。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>おはようございます、ながたかです。
+クラウドファンディング、始まりました！
+
+▼ページはこちら
+（CAMPFIREのリンク）
+
+コースがいくつかあります。
+迷ったら「とにかく応援」で、十分うれしいです。
+
+会社・団体の方は、このトークに「会社」と送ってください。
+セミナーのご案内をお返しします。
+
+見てもらえるだけでも、力になります。
+（音声：30秒）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+<div class="voice"><h4>声で話すこと（30秒）</h4>
+<p class="goal">ゴール：朝いちばんに、ページを開いてもらう</p>
+<ol><li>「始まりました」の報告</li><li>今の気持ち（どきどき・ありがたい）</li><li>「ページだけでも、のぞいてみてください」</li></ol>
+<p class="sm">入れたい一言：「見てもらえるだけでも、力になります」<br>避けること：長い説明（詳しいことはページに任せる）</p></div>
+</div></details>
+<details class="msgcard">
+<summary><span class="no">5</span><span class="when">11/1（日）21:00</span><span class="meta"><i class="l">文章</i><i>まだの方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">初日のお礼と途中経過。<br>夜に思い出してもらう。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>ながたかです。
+初日、本当にありがとうございました。
+
+今日だけで、〇〇人の方に応援していただきました。
+（今の金額や達成率を一行で）
+
+まだページを見ていない方は、寝る前にでも、のぞいてもらえたらうれしいです。
+（CAMPFIREのリンク）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+
+</div></details>
+<details class="msgcard">
+<summary><span class="no">6</span><span class="when">11/10（火）12:00</span><span class="meta"><i class="l">文章</i><i>「会社」を選んだ方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">会社向けのコースを、会社の方にだけ案内する。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>ながたかです。
+会社・団体の立場で関心を寄せてくださった方へ、ご案内です。
+
+社員のみなさんに向けた健康セミナーを、リターンとしてご用意しました。
+・オンライン 60分（資料つき）
+・対面 60分（資料つき・質問タイムあり）
+
+社員の食事や身体の動かし方について、会社に合わせた内容でお話しします。
+くわしくはこちらです。
+（CAMPFIREのリンク）
+
+ご質問は、このトークにそのまま送ってください。</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+
+</div></details>
+<details class="msgcard">
+<summary><span class="no">7</span><span class="when">11/15（日）20:00</span><span class="meta"><i class="v">声 1〜2分</i><i class="l">文章</i><i>まだの方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">中間のご報告。<br>応援してくれた方の声を紹介して、輪を広げる。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>こんばんは、ながたかです。
+始まって2週間、途中経過を声でお話ししました。
+（音声）
+
+▼ページはこちら
+（CAMPFIREのリンク）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+<div class="voice"><h4>声で話すこと（1〜2分）</h4>
+<p class="goal">ゴール：「自分も加わりたい」と思ってもらう</p>
+<ol><li>ここまでの人数と金額</li><li>うれしかった応援のひとこと（名前は出さない）</li><li>これからやりたいこと（会社を立ち上げたら、まず何をするか）</li><li>残りの期間</li></ol>
+<p class="sm">入れたい一言：「一緒に、最初の一歩をつくってもらえたら」<br>避けること：「あと〇〇万円足りません」のような焦らせる言い方</p></div>
+</div></details>
+<details class="msgcard">
+<summary><span class="no">8</span><span class="when">11月後半（追加した日）</span><span class="meta"><i class="l">文章</i><i>まだの方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">新しいリターンの追加を、話題にする。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>ながたかです。
+新しいリターンを追加しました。
+
+（追加したリターンの名前と、ひとこと説明）
+
+みなさんの声から生まれたコースです。
+（CAMPFIREのリンク）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+
+</div></details>
+<details class="msgcard">
+<summary><span class="no">9</span><span class="when">12/8（火）20:00</span><span class="meta"><i class="l">文章</i><i>まだの方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">残り1週間の合図。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>こんばんは、ながたかです。
+クラウドファンディングは、残り1週間になりました。
+
+ここまで応援してくださった方、本当にありがとうございます。
+最後まで、走りきります。
+（CAMPFIREのリンク）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+
+</div></details>
+<details class="msgcard">
+<summary><span class="no">10</span><span class="when">12/13（日）20:00</span><span class="meta"><i class="l">文章</i><i>まだの方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">残り2日。<br>週末の夜に思い出してもらう。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>ながたかです。
+残り2日になりました。
+
+（今の人数と金額を一行で）
+
+最後の2日、よろしくお願いします。
+（CAMPFIREのリンク）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+
+</div></details>
+<details class="msgcard peak">
+<summary><span class="no">11</span><span class="when">12/15（火）7:00</span><span class="meta"><i class="l">文章</i><i class="v">声 30秒</i><i>まだの方</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">最終日の朝。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>おはようございます、ながたかです。
+今日が最終日です。
+
+（音声：30秒）
+
+今夜〇時に締め切ります。
+（CAMPFIREのリンク）</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+<div class="voice"><h4>声で話すこと（30秒）</h4>
+<p class="goal">ゴール：最後の一押し（でも、お願いしすぎない）</p>
+<ol><li>今日が最終日であること</li><li>ここまでのお礼</li><li>会社としての最初の一歩を、どう踏み出すか</li></ol>
+<p class="sm">入れたい一言：「ここまで来られたのは、みなさんのおかげです」<br>避けること：泣き落とし、焦らせる言い方</p></div>
+</div></details>
+<details class="msgcard">
+<summary><span class="no">12</span><span class="when">12/16（水）20:00</span><span class="meta"><i class="v">声 1〜2分</i><i class="l">文章</i><i>全員</i></span></summary>
+<div class="inner">
+<p class="sm" style="font-size:15.5px;color:var(--muted)">お礼と結果のご報告。<br>このLINEを、会社のお客さまとのつながりとして残す。</p>
+<h4>文面（たたき台）</h4>
+<div class="txt"><pre>ながたかです。
+クラウドファンディング、無事に終わりました。
+本当に、ありがとうございました。
+
+結果のご報告と、これからのことを声でお話ししました。
+（音声）
+
+会社のこれからのお知らせも、このLINEでお届けします。
+これからも、よろしくお願いします。</pre></div>
+<button class="copy" type="button">文面をコピー</button>
+<div class="voice"><h4>声で話すこと（1〜2分）</h4>
+<p class="goal">ゴール：「これからも、この人の話を聞きたい」と思ってもらう</p>
+<ol><li>結果（人数・金額）とお礼</li><li>いただいた応援で、何をするか</li><li>会社の設立と、最初のサービスの予定</li><li>このLINEでお知らせを続けること</li></ol>
+<p class="sm">入れたい一言：「ここからが、本当のスタートです」<br>避けること：次の売り込み</p></div>
+</div></details>
+
+</section>
+
+<section id="rec">
+  <h2>声の録り方</h2>
+  <ul style="margin:0;padding-left:1.2em">
+    <li>スマホのボイスメモで十分です。<br>静かな部屋で、スマホを口から20cmほど離して</li>
+    <li>台本どおりに読まなくて大丈夫です。<br>上の「話す順番」だけ見て、いつものVoicyの調子で</li>
+    <li>録れたら、LINEグループにそのまま送ってください。<br>こちらで長さを整えて、LINEに入れます</li>
+    <li>放送の切り出しではなく、新しく録ったものを使います（Voicyの決まりの確認が要らないため）</li>
+  </ul>
+</section>
+
+<section id="set">
+  <h2>設定のこと（森川が進めます）</h2>
+  <ul style="margin:0;padding-left:1.2em">
+    <li>登録直後の1通は、LINEの「あいさつメッセージ」に入れる（通数に入らない）</li>
+    <li>「個人／会社／様子を見たい」のボタンで、UTAGEに目印をつける</li>
+    <li>メニューに「応援しました」ボタンを置き、押した方を「まだの方」から外す</li>
+    <li>11月・12月は有料プラン（月5,000円）にするかを、登録人数を見て決める</li>
+    <li>文面に「身体」と書くところは、「体」ではなく「身体」で統一</li>
+  </ul>
+</section>
+
+<footer>ながたか・起業共創プロジェクト<br>
+<a href="../1014/">10/14議事録</a>　·　<a href="../map/">戦略マップ</a>　·　<a href="../ai-shokuji/">AI食事分析の指示書</a>　·　<a href="../lp/">LP</a></footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.previousElementSibling.querySelector('pre').innerText;
+var done=function(){b.textContent='コピーしました';b.classList.add('done');setTimeout(function(){b.textContent='文面をコピー';b.classList.remove('done')},1800)};
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}})});
+</script>
+</body></html>
