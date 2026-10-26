@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公開日の決め直し｜ながたか・起業共創プロジェクト</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="公開日の決め直し｜ながたか・起業共創プロジェクト">
+<meta property="og:description" content="11/1をずらす場合の2つの案と、逆算のスケジュール。決めてほしいのは公開日だけです。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mm738966m-boop.github.io/nagataka-share/schedule/">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/schedule/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--accent:#0d9488;--deep:#0f766e;--ink:#1f2937;--muted:#5b6770;--hair:#e3e8e8;--bg:#f2f5f5;--paper:#fff;--soft:#e4f2f0;--flag-bg:#fff5ec;--flag-ink:#b4460f;--flag-line:#f6d4b4;--ok-bg:#eaf6f1;--ok-ink:#15704f;--ok-line:#bfe3d3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#4dd6c4;--deep:#7fe6d6;--ink:#e6efee;--muted:#a3b4b4;--hair:#2b3a3c;--bg:#121a1c;--paper:#1a2426;--soft:#1f3335;--flag-bg:#33210f;--flag-ink:#ffb277;--flag-line:#54371b;--ok-bg:#132a22;--ok-ink:#6fd6ab;--ok-line:#254a3b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-weight:500;line-height:1.85;font-size:17px;-webkit-text-size-adjust:100%}
+.page{max-width:680px;margin:0 auto;padding:24px 16px 64px;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--accent);font-weight:700}
+h1{font-size:clamp(25px,6.5vw,32px);line-height:1.4;margin:6px 0 4px;text-wrap:balance}
+.lead{margin:0;color:var(--muted);font-size:15px}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;overflow-x:auto;background:var(--bg);padding:8px 16px;margin:0 -16px;border-bottom:1px solid var(--hair);scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;white-space:nowrap;font-size:14px;font-weight:700;color:var(--muted);background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:6px 13px}
+section{background:var(--paper);border:1px solid var(--hair);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:12px;scroll-margin-top:60px}
+h2{font-size:19px;margin:0;padding-bottom:9px;border-bottom:2px solid var(--accent);display:flex;align-items:baseline;gap:8px}
+h2 small{font-size:13px;color:var(--muted);font-weight:500;margin-left:auto}
+h3{font-size:16px;margin:4px 0 0;color:var(--deep)}
+p{margin:0}
+.facts{display:flex;flex-direction:column;gap:7px;margin:0}
+.fact{display:grid;grid-template-columns:78px 1fr;gap:10px;background:var(--soft);border-radius:9px;padding:9px 12px;font-size:15px}
+.fact dt{color:var(--deep);font-weight:700;font-size:14px}.fact dd{margin:0}
+.decide{border:2px solid var(--accent);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.decide .no{display:inline-block;background:var(--deep);color:var(--paper);border-radius:6px;padding:2px 10px;font-size:14px;font-weight:700;width:max-content}
+.decide .q{font-size:17px;font-weight:700}
+.flag{background:var(--flag-bg);border:1px solid var(--flag-line);border-radius:10px;padding:12px 14px;font-size:15px}
+.flag b{color:var(--flag-ink)}
+.ok{background:var(--ok-bg);border:1px solid var(--ok-line);border-radius:10px;padding:12px 14px;font-size:15px}
+ul{margin:0;padding-left:1.25em}li{margin:5px 0;font-size:15.5px}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:420px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid var(--hair);vertical-align:top}
+th{background:var(--soft);font-size:14px;white-space:nowrap}
+td.p{white-space:nowrap;font-weight:700;color:var(--deep);font-variant-numeric:tabular-nums}
+.tl{display:flex;flex-direction:column;gap:0}
+.tl div{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--hair);font-size:15.5px}
+.tl div:first-child{border-top:0}
+.tl dt{font-weight:700;color:var(--deep);font-variant-numeric:tabular-nums}.tl dd{margin:0}
+.tl .now dt{color:var(--flag-ink)}
+.tag{display:inline-block;font-size:12.5px;border-radius:5px;padding:1px 8px;margin-left:4px;font-weight:700;background:var(--soft);color:var(--deep)}
+footer{text-align:center;color:var(--muted);font-size:13px}
+footer a{color:var(--deep)}
+.person{border-radius:12px;border:1px solid var(--hair);border-left:6px solid var(--c);padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px}
+.person.n{--c:#0d9488}.person.o{--c:#d97706}.person.m{--c:#4f46e5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .person.n{--c:#4dd6c4}:root:not([data-theme="light"]) .person.o{--c:#f5a524}:root:not([data-theme="light"]) .person.m{--c:#9d97ff}}
+.person .name{font-size:18px;font-weight:700;color:var(--c);display:flex;align-items:baseline;gap:8px}
+.person .name small{font-size:13px;color:var(--muted);font-weight:500}
+.grp{font-size:13.5px;font-weight:700;color:var(--muted);margin:4px 0 -2px}
+.chk{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.chk li{margin:0;display:grid;grid-template-columns:22px 1fr;gap:6px;font-size:16px;line-height:1.65}
+.chk li::before{content:"";width:16px;height:16px;border:2px solid var(--c);border-radius:4px;margin-top:5px}
+.chk li span{display:block;font-size:14px;color:var(--muted)}
+.due{background:var(--soft);border-radius:9px;padding:9px 12px;font-size:15px}
+
+p,li,dd,b,span,summary{word-break:auto-phrase}
+.idea{border:2px dashed var(--accent);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.idea .lbl{font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.06em}
+.idea ul{margin:0;padding-left:1.15em}
+.cir{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cir div{border:2px solid var(--accent);border-radius:999px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
+.cir b{font-size:19px;font-weight:800}
+.cir span{font-size:14px;background:var(--soft);border-radius:999px;padding:1px 10px;color:var(--deep);font-weight:700}
+
+.plans{display:grid;grid-template-columns:1fr;gap:12px}
+.plan{border:2px solid var(--hair);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.plan.rec{border-color:var(--accent);background:var(--soft)}
+.plan .badge2{align-self:flex-start;font-size:13px;font-weight:800;border-radius:999px;padding:2px 12px;background:var(--deep);color:var(--paper)}
+.plan .d{font-size:clamp(22px,6vw,28px);font-weight:800;line-height:1.4}
+.plan .d small{display:block;font-size:15px;color:var(--muted);font-weight:700}
+.plan ul{margin:0;padding-left:1.2em}
+.plan li{font-size:16px}
+.ask1{background:var(--deep);color:#fff;border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;gap:8px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ask1{background:#0d4a50}}
+.ask1 .t{display:inline-block;align-self:flex-start;background:#fff;color:#0f766e;font-weight:800;font-size:14px;border-radius:999px;padding:2px 14px}
+.ask1 .b{font-size:clamp(20px,5.4vw,24px);font-weight:800;line-height:1.55}
+.ask1 .s{font-size:16px;opacity:.92}
+</style></head><body><div class="page">
+
+<header>
+  <div class="eyebrow">2026.10.27 ／ 森川より</div>
+  <h1>公開日の決め直し</h1>
+  <p class="lead">11/1の公開は、ずらしましょう。<br>ながたかさんが動ける時期から逆算して、2つの案を出しました。</p>
+</header>
+
+<div class="ask1">
+  <span class="t">決めてほしいのは1つだけ</span>
+  <p class="b">公開日を、AとBのどちらにするか</p>
+  <p class="s">決まれば、ページ・LINE・告知の日付は森川と尾道さんで合わせます。</p>
+</div>
+
+<section>
+  <h2>いまの状況</h2>
+  <ul>
+    <li>10月末までは、大学の時間割づくりと教科書の執筆で手がいっぱい</li>
+    <li>11月の初めは、比較的時間がとれそう</li>
+    <li>リターンが固まっていないので、CAMPFIREの審査はまだ（審査は1週間ほどかかります）</li>
+    <li>コラボ：深澤さんは日程調整中／さおりさんは打診済み／青木ゆうたさんは来週か再来週／中島侑子さんは11/18のご出版のあと</li>
+  </ul>
+</section>
+
+<section>
+  <h2>2つの案</h2>
+  <div class="plans">
+    <div class="plan rec">
+      <span class="badge2">おすすめ</span>
+      <p class="d">A　11/22（日）〜 12/20（日）<small>29日間</small></p>
+      <ul>
+        <li>準備に余裕がある（11月初めにリターンを決めて、審査を通せる）</li>
+        <li>公開日が、まるちゃんの10周年のお祝い会と同じ日＝その場で直接伝えられる</li>
+        <li>中島侑子さんのコラボ（11/18以降）が、公開の直後に重なる</li>
+        <li>11/30の寅の会と、11月末の静岡オフ会が、ちょうど中盤の盛り上げに</li>
+        <li>12月のボーナスの時期をはさんで、年末の忙しさの前に終わる</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <span class="badge2" style="background:var(--muted)">早めに出す</span>
+      <p class="d">B　11/15（日）〜 12/20（日）<small>36日間</small></p>
+      <ul>
+        <li>期間は長くとれる</li>
+        <li>そのかわり、<b>リターンを11/1までに決めて、11/10までに審査を通す</b>必要がある</li>
+        <li>10月末の忙しさと重なるので、準備はかなり詰まります</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note">期間は短いほうが、中だるみせずに走り切れます。<br>30日前後でも、支援が集まる流れは十分つくれます。</div>
+</section>
+
+<section>
+  <h2>Aにした場合の流れ</h2>
+  <dl class="tl">
+    <div><dt>〜10/31</dt><dd><b>リターンの振り分け</b>（尾道さんの一覧で、第1弾だけ決めればOK）</dd></div>
+    <div><dt>11/2（月）</dt><dd>寅の会：公開日の予告</dd></div>
+    <div><dt>11/1〜5</dt><dd>リターンをページに反映 → 再申請</dd></div>
+    <div><dt>11/6〜12</dt><dd>CAMPFIREの審査（直しがあれば対応）</dd></div>
+    <div><dt>11/13ごろ</dt><dd>事前告知ページの公開＋LP・公式LINEの案内をスタート</dd></div>
+    <div><dt>11/13〜21</dt><dd>コラボ放送で予告（深澤さん・さおりさん・青木ゆうたさん）</dd></div>
+    <div><dt>11/21（土）</dt><dd>LINE「明日、始まります」</dd></div>
+    <div class="now"><dt>11/22（日）</dt><dd><b>公開</b>／まるちゃんの10周年の会でもご挨拶</dd></div>
+    <div><dt>11月後半</dt><dd>中島侑子さんとのコラボ</dd></div>
+    <div><dt>11/30（月）</dt><dd>寅の会・静岡オフ会で中盤の盛り上げ</dd></div>
+    <div><dt>12月上旬</dt><dd>途中経過を声で（ボーナスの時期）</dd></div>
+    <div><dt>12/18（金）</dt><dd>LINE「残り3日」</dd></div>
+    <div><dt>12/20（日）</dt><dd>最終日</dd></div>
+    <div><dt>12/21（月）</dt><dd>お礼と結果のご報告</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2>ながたかさんにお願いすること</h2>
+  <ul class="chk">
+    <li><div>公開日をAかBか決める</div></li>
+    <li><div>尾道さんのリターン一覧で、第1弾を決める<span>全部でなくて大丈夫です。第2弾以降は、公開してから足せます</span></div></li>
+    <li><div>コラボの日程を、公開日に合わせて調整<span>公開前に予告できる方（深澤さん・さおりさん・青木ゆうたさん）と、公開後の方（中島さん）に分けると楽です</span></div></li>
+  </ul>
+</section>
+
+<section>
+  <h2>日付が決まったら、こちらで直すもの</h2>
+  <ul>
+    <li>LP（「11月1日」と書いてあるところ）</li>
+    <li>公式LINEの文面と、送る日</li>
+    <li>いただいた声の1通目：最後の「次は11月1日の朝に」の一文だけ外せば、そのまま使えます（外した版を用意済み）</li>
+    <li>2通目の声は日付の話がないので、そのまま使えます</li>
+  </ul>
+</section>
+
+<footer>ながたか・起業共創プロジェクト<br>
+<a href="../1014/">10/14議事録</a>　·　<a href="../line-plan/">公式LINEの配信一覧</a>　·　<a href="../lp/">LP</a></footer>
+</div></body></html>
