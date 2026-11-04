@@ -84,7 +84,8 @@ h3{font-size:21px;color:var(--forest);margin:0 0 8px}
 .rank{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
 .rank div{background:linear-gradient(180deg,#fff,#f4f6ee);border:1px solid var(--hair);border-radius:6px;padding:16px 8px;text-align:center;box-shadow:0 10px 16px -14px rgba(12,42,29,.45),inset 0 1px 0 #fff}
 .rank small{display:block;font-size:14px;font-weight:700;letter-spacing:.2em;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.rank b{display:block;font-size:21px;line-height:1.5;font-family:var(--mincho);color:var(--forest)}
+.rank b{display:block;font-size:clamp(17px,5vw,21px);line-height:1.5;font-family:var(--mincho);color:var(--forest);white-space:nowrap}
+.rank em{display:block;font-style:normal;font-size:14px;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
 .src{font-size:14px;color:var(--muted);line-height:1.7}
 .mat{display:flex;flex-direction:column;margin-top:22px}
 .mat div{border-top:1px solid var(--hair);padding:14px 0;line-height:1.7;display:grid;grid-template-columns:1fr 22px 1fr;gap:8px;align-items:center}
@@ -238,8 +239,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
   <h2 class="rv">やる気ではなく、<br>まわりの環境でした。</h2>
   <div class="body rv"><p>「週に1日も運動ができなかった理由」を尋ねた国の調査があります。</p></div>
   <div class="rank rv">
-    <div><small>1位</small><b>面倒くさいから</b></div>
-    <div><small>2位</small><b>仕事が忙しいから</b></div>
+    <div><small>1位</small><b>面倒くさいから</b><em>31.8%</em></div>
+    <div><small>2位</small><b>仕事が忙しいから</b><em>28.6%</em></div>
   </div>
   <p class="src rv">スポーツ庁 令和7年度「スポーツの実施状況等に関する世論調査」より</p>
   <div class="body rv"><p>それなら、面倒でなく、時間もかからない形にすればいい。<br>人は、置かれた環境の<br>とおりに動きます。</p></div>
