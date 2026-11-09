@@ -122,6 +122,11 @@ h3{font-size:21px;color:var(--forest);margin:0 0 8px}
 
 /* 私について */
 .me{display:flex;flex-direction:column;gap:24px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal .photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal .wide{grid-column:1/-1}
+.gal .wide img{aspect-ratio:3/2}
+.gal figcaption{background:linear-gradient(0deg,rgba(12,42,29,.88) 35%,transparent);line-height:1.5}
 .duo{display:grid;grid-template-columns:1.25fr 1fr;gap:10px;align-items:stretch}
 .duo .photo img{width:100%;height:100%;object-fit:cover}
 .duo .photo:first-child img{object-position:78% center}
@@ -158,7 +163,7 @@ details p{padding:0 0 20px 26px;color:var(--muted);font-size:17px}
 
 /* 最後 */
 .last{text-align:center;background:radial-gradient(100% 60% at 50% 0%,#eef2e6,var(--bg))}
-.last .photo{margin:0 auto 36px;max-width:420px}
+.last .photo{margin:0 auto 30px;max-width:240px}
 .last .chap{justify-content:center}.last .chap::after{display:none}
 .last h2{margin-bottom:16px}
 .last .btn{margin-top:28px}
@@ -178,7 +183,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
 
 
 <header class="hero"><div class="wrap">
-  <figure class="heroimg"><img src="img/hero.jpg?v=3" alt="芝生に座って笑うながたか" width="1400" height="931" fetchpriority="high"></figure>
+  <figure class="heroimg"><img src="img/hero_voicy.jpg" alt="ブロッコリーごはんを手に座るながたか" width="1400" height="931" fetchpriority="high"></figure>
   <span class="date">11月22日（日）クラウドファンディング開始</span>
   <h1>1年中、<br><em>健康診断の前</em><br>みたいな自分で。</h1>
   <p class="sub">頑張らなくても、<br>気づいたら身体にいいことをしている。<br>そんな毎日をつくる会社を、<br>立ち上げます。</p>
@@ -187,7 +192,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
     <div><b>ながたか（永澤 貴昭）</b><span>大学教員・博士（学術）<br>専門はスポーツ栄養学</span></div>
   </div>
   <a class="btn" href="https://utage-system.com/line/open/qBddu1fxp677?ref=lp"><svg viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="14.5" rx="13.5" ry="10.8" fill="#fff"/><path d="M10.5 23.2l-1.2 5.6 7-4.6z" fill="#fff"/><text x="16" y="17.4" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="7.6" font-weight="900" fill="#06C755" letter-spacing=".2">LINE</text></svg><span>LINEで開始のお知らせを受け取る<small>登録は無料・30秒</small></span></a>
-  <p class="cap">11月22日の朝、開始のお知らせを1通お送りします。<br>登録は無料です。支援のお申し込みではありません。</p>
+  <p class="cap">まず、ごあいさつが届きます。<br>そのあとは11月22日の朝の開始のお知らせと、<br>期間中の大事なお知らせだけです。<br>登録は無料です。支援のお申し込みではありません。</p>
   <a class="scrollcue" href="#mirai">つづきを読む</a>
 </div></header>
 
@@ -283,9 +288,10 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
   <p class="chap rv"><i>05</i>私について</p>
   <h2 class="rv">現場で磨いたことを、<br>ふだんの暮らしへ。</h2>
   <div class="me">
-    <div class="duo rv">
-      <figure class="photo"><img src="img/lecture.jpg?v=2" alt="講義の様子" loading="lazy" width="1400" height="811"><figcaption>講義の様子</figcaption></figure>
-      <figure class="photo"><img src="img/team.jpg?v=2" alt="日本代表チームに帯同した大会でのながたか" loading="lazy" width="931" height="1397"><figcaption>日本代表に帯同</figcaption></figure>
+    <div class="gal rv">
+      <figure class="photo"><img src="img/lab.jpg" alt="授業で話すながたか" loading="lazy" width="900" height="1202" style="object-position:center 20%"><figcaption>大学の授業</figcaption></figure>
+      <figure class="photo"><img src="img/team.jpg?v=2" alt="日本代表チームに帯同した大会でのながたか" loading="lazy" width="931" height="1397"><figcaption>日本代表に帯同<br>2023年</figcaption></figure>
+      <figure class="photo wide"><img src="img/poster_w.jpg" alt="学会で研究を発表するながたか" loading="lazy" width="1200" height="800"><figcaption>研究を学会で発表</figcaption></figure>
     </div>
     <div class="body rv">
       <p>スポーツの現場で、<br>選手の身体づくりを支えてきました。<br>やりがいのある仕事です。</p>
@@ -336,8 +342,8 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:30px 20px 10p
 <section class="last" id="line"><div class="wrap">
   <figure class="photo rv"><img src="img/smile.jpg" alt="笑顔のながたか" loading="lazy" width="931" height="1400"></figure>
   <p class="chap rv">お知らせ</p>
-  <h2 class="rv">始まったら、<br>いちばんにお知らせします。</h2>
-  <p class="rv">公式LINEに登録しておくと、<br>11月22日の朝に1通届きます。</p>
+  <h2 class="rv">始まったら、<br>いちばんに<br>お知らせします。</h2>
+  <p class="rv">公式LINEに登録しておくと、<br>11月22日の朝にお知らせが届きます。</p>
   <a class="btn rv" href="https://utage-system.com/line/open/qBddu1fxp677?ref=lp"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#lineicon"/></svg><span>LINEで開始のお知らせを受け取る<small>登録は無料・30秒</small></span></a>
 </div></section>
 
