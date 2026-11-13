@@ -79,6 +79,14 @@ h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
 .agenda li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:10px;background:var(--paper);border-radius:8px;padding:12px 14px;box-shadow:0 0 0 1px var(--hair)}
 .agenda li::before{content:counter(a);font-family:var(--mincho);font-weight:800;font-size:22px;line-height:1.4;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .agenda b{display:block;font-size:16.5px}
+.flow{background:var(--leaf);border-radius:8px;padding:12px 14px;margin:-4px 0 16px;font-size:15px}
+.flow b{display:block;color:var(--green);margin-bottom:4px}
+.flow ol{margin:0;padding:0;list-style:none}
+.flow li{display:grid;grid-template-columns:48px 1fr;gap:6px;line-height:1.8}
+.flow li span{font-weight:700;color:var(--deep)}
+.bring{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.bring li{background:var(--paper);border-radius:8px;padding:10px 14px 10px 40px;box-shadow:0 0 0 1px var(--hair);position:relative;font-size:16px}
+.bring li::before{content:"";position:absolute;left:15px;top:19px;width:12px;height:12px;border-radius:3px;box-shadow:0 0 0 2px var(--gold)}
 .agenda span{display:block;font-size:15px;color:var(--muted);line-height:1.7}
 footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)}
 @media print{body{font-size:12px}header{background:none}section{padding:20px 0;break-inside:avoid-page}.item,.tl li,.agenda li{break-inside:avoid}}
@@ -187,13 +195,15 @@ footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
       <li><span class="who w-f">fulfull</span>SNSの文をお渡し（18日まで）</li></ul></div></li>
     <li><div class="dt">11/18<small>水</small></div><div class="bx"><b>中島侑子さんの本の発売日</b><ul><li><span class="who w-n">ながたか</span>このあとコラボの日程を相談</li></ul></div></li>
     <li><div class="dt">11/19<small>木</small></div><div class="bx"><b>Note ① 公開</b></div></li>
-    <li><div class="dt">11/20<small>金</small></div><div class="bx"><b>リール ①「予告」公開</b></div></li>
+    <li><div class="dt">11/20<small>金</small></div><div class="bx"><b>リール ①「予告」公開</b><ul><li><span class="who w-f">fulfull</span>公式LINEの料金プランを切り替える（Zoomで決まれば）</li></ul></div></li>
     <li class="big"><div class="dt">11/21<small>土</small></div><div class="bx"><b>前日</b><ul>
       <li><span class="who w-f">fulfull</span>20:00 LINE「明日の朝、始まります」（声つき）</li>
       <li><span class="who w-n">ながたか</span>X・Instagramに前日の投稿</li></ul></div></li>
     <li class="big"><div class="dt">11/22<small>日・初日</small></div><div class="bx"><b>クラファン開始</b><ul>
       <li><span class="who w-f">fulfull</span>7:00 LINE「始まりました」（声つき）・LPを期間中の版に</li>
       <li><span class="who w-n">ながたか</span>Voicyとオープンチャットでお知らせ</li>
+      <li><span class="who w-n">ながたか</span>Voicyの概要欄・X・Instagramのプロフィールのリンクを、CAMPFIREのページに替える</li>
+      <li><span class="who w-f">fulfull</span>公式LINEの下のメニューを、期間中のものに替える</li>
       <li><span class="who w-f">fulfull</span>リール ②「始まりました」・Note ② 公開</li></ul></div></li>
     <li><div class="dt">11/27<small>金</small></div><div class="bx"><b>会社の方だけにLINE</b></div></li>
     <li><div class="dt">11/30<small>月</small></div><div class="bx"><b>寅の会（11月末には静岡オフ会も）</b><ul><li><span class="who w-n">ながたか</span>中盤の呼びかけ</li></ul></div></li>
@@ -216,6 +226,8 @@ footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
 <section><div class="wrap">
   <p class="chap"><i>05</i>次のZoomで</p>
   <h2>決めたいこと。</h2>
+  <div class="flow"><b>当日の進め方（60分）</b>
+    <ol><li><span>5分</span>このページで、いまの状態を確認</li><li><span>30分</span>決めたいこと（下の1〜7）</li><li><span>15分</span>確認したいこと（06）</li><li><span>10分</span>次のZoomまでの宿題を、だれが・いつまでに</li></ol></div>
   <ol class="agenda">
     <li><div><b>会社名</b><span>「（仮）」のまま始めるか、決めて始めるか。</span></div></li>
     <li><div><b>リールの撮影</b><span>3本ぶんの撮る内容と、いつ撮るか。1本目は11/18までにいただけると助かります。</span></div></li>
@@ -225,6 +237,31 @@ footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
     <li><div><b>推薦文</b><span>さおりさん・バッシーさん・タケオさんにお願いする件が、いまどうなっているか。</span></div></li>
     <li><div><b>最初の写真</b><span>ごはんだけのどんぶりか、ブロッコリーの載った版か。</span></div></li>
   </ol>
+</div></section>
+
+<section><div class="wrap">
+  <p class="chap"><i>06</i>次のZoomで</p>
+  <h2>確認したいこと。</h2>
+  <ol class="agenda chk2">
+    <li><div><b>初日に応援してくれる人へのお声がけ</b><span>9月に決めた「ニックさんへの会社向けのご提案」と「初日に応援してくれそうな方への事前のお願い」が、いまどうなっているか。<br>最初の数日の勢いが、そのあとの見え方を大きく左右します。</span></div></li>
+    <li><div><b>会社向けのセミナーを、どこに声をかけるか</b><span>11/27に「会社の方だけ」へLINEを送ります。<br>それとは別に、ながたかさんから直接お声がけする会社の候補。</span></div></li>
+    <li><div><b>期間中に足すリターン</b><span>第1弾に入らなかったものから、11月後半に何を足すか。だれが申請するか。</span></div></li>
+    <li><div><b>CAMPFIREの活動報告</b><span>期間中の活動報告を、だれが・どのくらいの間隔で書くか（例：週1回）。</span></div></li>
+    <li><div><b>公式LINEの料金プラン</b><span>無料のプランは、月に送れる数が200通までです。<br>友だちが40人を超えると、期間中のお知らせが途中で送れなくなります。<br>11/21の前に有料のプラン（ライト・月5,000円・税別）に切り替えるかどうか。</span></div></li>
+    <li><div><b>11/22の朝にリンクを替える場所</b><span>Voicyの概要欄・X・Instagram・オープンチャット・公式LINEのメニュー。<br>だれがどこを替えるか。</span></div></li>
+    <li><div><b>終わったあとのリターンのお届け</b><span>12/21以降、お届けの段取りと連絡をだれがするか。</span></div></li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <p class="chap"><i>07</i>Zoomの前に</p>
+  <h2>考えておいていただけると<br>助かること。</h2>
+  <ul class="bring">
+    <li>会社名の候補（決まっていなくても、いくつか）</li>
+    <li>コラボのお相手と、だいたいの候補日</li>
+    <li>初日に、直接ひとことお願いしたい方の顔ぶれ</li>
+    <li>リール1本目に撮れそうな場面（授業の前後・ごはん・通勤の階段など）</li>
+  </ul>
 </div></section>
 
 <footer>ながたか（永澤 貴昭）クラウドファンディング｜進め方の共有<br>fulfull株式会社</footer>
