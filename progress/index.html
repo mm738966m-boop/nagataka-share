@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>いまどこまで｜ながたかクラファン</title>
+<meta property="og:title" content="いまどこまで｜ながたかクラファン">
+<meta property="og:description" content="お約束した11項目の現在地と、12月までの予定。次のZoomで決めたいこと。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Shippori+Mincho:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2F6B4A;--deep:#173D2B;--forest:#0C2A1D;--leaf:#EEF2E8;--gold:#B49A5E;--goldsoft:#DCCB9C;--ink:#1e2622;--muted:#586660;--bg:#FAFAF6;--paper:#fff;--hair:#E2E5DA;
+--done:#2F6B4A;--doneBg:#E6F0E8;--doing:#8A6A1F;--doingBg:#F6EFD9;--todo:#A3472F;--todoBg:#F8E6E0;
+--mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--goldgrad:linear-gradient(100deg,#9c8348 0%,#e6d7a8 45%,#b49a5e 70%,#8d7740 100%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6EBE5;--muted:#A9B5AE;--bg:#0E1A14;--paper:#15241C;--hair:#2A3B32;--leaf:#1B2C23;--forest:#E9F0E9;--deep:#CFE3D5;--green:#8FC4A2;
+--done:#8FC4A2;--doneBg:#1D3327;--doing:#E2C77E;--doingBg:#3A321C;--todo:#F0A08A;--todoBg:#3B2420}}
+:root[data-theme="dark"]{--ink:#E6EBE5;--muted:#A9B5AE;--bg:#0E1A14;--paper:#15241C;--hair:#2A3B32;--leaf:#1B2C23;--forest:#E9F0E9;--deep:#CFE3D5;--green:#8FC4A2;
+--done:#8FC4A2;--doneBg:#1D3327;--doing:#E2C77E;--doingBg:#3A321C;--todo:#F0A08A;--todoBg:#3B2420}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;font-weight:500;font-size:17px;line-height:1.9;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--mincho);font-weight:800;letter-spacing:.04em;line-height:1.5;margin:0;color:var(--forest);text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+header{padding:34px 0 26px;border-bottom:1px solid var(--hair);background:radial-gradient(120% 80% at 85% 0%,rgba(180,154,94,.14),transparent 60%)}
+.kick{display:inline-block;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.14em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:4px 2px}
+h1{font-size:clamp(28px,7.4vw,40px);margin-top:16px}
+.lead{margin-top:14px;color:var(--muted);font-size:16px}
+section{padding:40px 0;border-bottom:1px solid var(--hair)}
+.chap{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.18em}
+.chap i{font-style:normal;font-family:var(--mincho);font-size:26px;line-height:1;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chap::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
+/* 集計 */
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.sum div{background:var(--paper);border-radius:8px;padding:14px 8px;text-align:center;box-shadow:0 0 0 1px var(--hair)}
+.sum b{display:block;font-family:var(--mincho);font-size:34px;line-height:1.2}
+.sum span{font-size:13.5px;font-weight:700}
+.sum .d b,.sum .d span{color:var(--done)}.sum .g b,.sum .g span{color:var(--doing)}.sum .t b,.sum .t span{color:var(--todo)}
+.bar{display:flex;height:10px;border-radius:99px;overflow:hidden;margin-top:14px;background:var(--hair)}
+.bar i{display:block}.bar .d{background:var(--done)}.bar .g{background:var(--doing)}.bar .t{background:var(--todo)}
+/* 項目カード */
+.items{display:flex;flex-direction:column;gap:12px}
+.item{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:16px 16px 14px;border-left:5px solid var(--c)}
+.item.done{--c:var(--done)}.item.doing{--c:var(--doing)}.item.todo{--c:var(--todo)}
+.ih{display:flex;align-items:flex-start;gap:10px}
+.no{flex:none;font-family:var(--mincho);font-weight:800;font-size:20px;color:var(--c);line-height:1.5;width:26px}
+.ih h3{flex:1;font-size:18px;font-family:"Noto Sans JP",sans-serif;font-weight:700;letter-spacing:.02em;color:var(--ink)}
+.chip{flex:none;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:99px;color:var(--c);background:var(--bg2);white-space:nowrap;margin-top:3px}
+.done .chip{--bg2:var(--doneBg)}.doing .chip{--bg2:var(--doingBg)}.todo .chip{--bg2:var(--todoBg)}
+.item dl{margin:10px 0 0 36px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:15.5px;line-height:1.75}
+.item dt{font-weight:700;color:var(--muted);white-space:nowrap}
+.item dd{margin:0}
+/* 優先 */
+.prio{display:flex;flex-direction:column;gap:12px}
+.pc{background:var(--paper);border-radius:8px;padding:16px;box-shadow:0 0 0 1px var(--gold)}
+.pc h3{font-size:19px}
+.pc p{margin-top:6px;font-size:15.5px}
+.pc .ask{margin-top:10px;padding:10px 12px;border-radius:6px;background:var(--leaf);font-size:15px}
+.pc .ask b{color:var(--green)}
+/* 予定 */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:78px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--hair))}
+.tl li{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:10px 0;position:relative}
+.tl li::before{content:"";position:absolute;left:73px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 2px var(--gold)}
+.tl li.big::before{background:var(--gold)}
+.tl .dt{font-weight:700;font-size:14.5px;line-height:1.5;padding-top:6px;color:var(--deep)}
+.tl .dt small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+.tl .bx{background:var(--paper);border-radius:8px;padding:10px 14px;box-shadow:0 0 0 1px var(--hair)}
+.tl li.big .bx{box-shadow:0 0 0 1.5px var(--gold)}
+.tl .bx b{display:block;font-size:16px;line-height:1.6}
+.tl .bx ul{margin:4px 0 0;padding-left:1.1em;font-size:15px;line-height:1.75}
+.who{display:inline-block;font-size:11.5px;font-weight:700;border-radius:4px;padding:0 6px;margin-right:4px;vertical-align:1px;line-height:1.7}
+.w-f{background:var(--leaf);color:var(--green)}.w-n{background:var(--doingBg);color:var(--doing)}.w-o{background:#E8E6F3;color:#4B4485}.w-a{background:var(--hair);color:var(--muted)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .w-o{background:#26233A;color:#B9B2F0}}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+/* 決めたいこと */
+.agenda{counter-reset:a;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.agenda li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:10px;background:var(--paper);border-radius:8px;padding:12px 14px;box-shadow:0 0 0 1px var(--hair)}
+.agenda li::before{content:counter(a);font-family:var(--mincho);font-weight:800;font-size:22px;line-height:1.4;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.agenda b{display:block;font-size:16.5px}
+.agenda span{display:block;font-size:15px;color:var(--muted);line-height:1.7}
+footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)}
+@media print{body{font-size:12px}header{background:none}section{padding:20px 0;break-inside:avoid-page}.item,.tl li,.agenda li{break-inside:avoid}}
+</style></head><body>
+
+<header><div class="wrap">
+  <span class="kick">11月13日（金）時点</span>
+  <h1>クラファンの準備、<br>いまどこまで。</h1>
+  <p class="lead">8月にお約束した11項目が、いまどこまで進んでいるか。<br>そして、12月までの予定をまとめました。<br>次のZoomで、この順に確認させてください。</p>
+</div></header>
+
+<section><div class="wrap">
+  <p class="chap"><i>01</i>ひと目で</p>
+  <h2>11項目のうち、<br>5つはできています。</h2>
+  <div class="sum">
+    <div class="d"><b>5</b><span>できた</span></div>
+    <div class="g"><b>3</b><span>進めている</span></div>
+    <div class="t"><b>3</b><span>これから</span></div>
+  </div>
+  <div class="bar" aria-hidden="true"><i class="d" style="flex:5"></i><i class="g" style="flex:3"></i><i class="t" style="flex:3"></i></div>
+  <p class="note">「できた」にも、公開日までの仕上げが少し残っているものがあります。<br>「これから」の3つ（Note記事・SNSの投稿文・リール動画）は、こちらでこれから作ります。</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="chap"><i>02</i>11項目の現在地</p>
+  <h2>ひとつずつ。</h2>
+  <div class="items">
+
+    <div class="item done"><div class="ih"><span class="no">1</span><h3>クラファンページの構成・本文</h3><span class="chip">できた</span></div>
+      <dl><dt>済</dt><dd>インタビューをもとに、尾道さんが13ページで作成。<br>11月8日にCAMPFIREへ申請しました。</dd>
+      <dt>残り</dt><dd>審査で直しが出たら対応します。</dd></dl></div>
+
+    <div class="item done"><div class="ih"><span class="no">2</span><h3>メイン画像・見出し画像</h3><span class="chip">できた</span></div>
+      <dl><dt>済</dt><dd>ヘッダー画像「病気になってからでは、遅い。」と、ページ内の画像。</dd>
+      <dt>残り</dt><dd>期間中に使う「中間のご報告」「ラストスパート」の画像を、12月までに用意します。</dd></dl></div>
+
+    <div class="item done"><div class="ih"><span class="no">3</span><h3>リターンの設計</h3><span class="chip">できた</span></div>
+      <dl><dt>済</dt><dd>第1弾をまとめて申請済み。<br>からだ分析・オンライン質問会・スクワット券・会社向けセミナーなど。</dd>
+      <dt>残り</dt><dd>期間中に追加するリターン（11月後半の目安）。</dd></dl></div>
+
+    <div class="item done"><div class="ih"><span class="no">4</span><h3>想いのLPと、クラファンページへの流れ</h3><span class="chip">できた</span></div>
+      <dl><dt>済</dt><dd>想いのLP・会社向けページを公開。<br>最初の写真はVoicyと同じ写真に。<br>期間中の版（いちばん上のボタンをCAMPFIREに替えたもの）も下書き済み。</dd>
+      <dt>残り</dt><dd>CAMPFIREのURLが決まったら、11月22日の朝に入れ替え。<br>会社向けページにも、届いた写真を入れます。</dd></dl></div>
+
+    <div class="item todo"><div class="ih"><span class="no">5</span><h3>Note記事 4本</h3><span class="chip">これから</span></div>
+      <dl><dt>済</dt><dd>テーマ4つは決めてあります。<br>①40代から急に太るのはなぜ？<br>②運動しても痩せないを、食事から<br>③健康診断の数値が気になり始めたら<br>④プロテイン、結局どう選ぶ？</dd>
+      <dt>次</dt><dd>本文はこちらで書き、ながたかさんに中身を確かめてもらってから出します。<br>11月19日から順に公開します（予定は下に）。</dd></dl></div>
+
+    <div class="item done"><div class="ih"><span class="no">6</span><h3>公式LINEと、事前のお知らせ</h3><span class="chip">できた</span></div>
+      <dl><dt>済</dt><dd>公式LINEとUTAGEをつなぎ、登録直後と翌日の自動メッセージが動いています。<br>配信一覧も作成済み。<br>11月21日夜・22日朝の声も受け取りました。</dd>
+      <dt>残り</dt><dd>21日・22日の配信予約（CAMPFIREのURL待ち）。<br>残りの声3本（12/6・12/19・12/21締め）。</dd></dl></div>
+
+    <div class="item todo"><div class="ih"><span class="no">7</span><h3>X・Instagramの告知用の文</h3><span class="chip">これから</span></div>
+      <dl><dt>済</dt><dd>7月に下書きを作りましたが、いまの言葉（「1年中、健康診断の前みたいな自分で。」・11月22日開始）と合っていません。</dd>
+      <dt>次</dt><dd>作り直して、11月18日までにお渡しします。<br>コピーして貼るだけで使える形にします。</dd></dl></div>
+
+    <div class="item doing"><div class="ih"><span class="no">8</span><h3>全体の進行・期間中の運用</h3><span class="chip">進めている</span></div>
+      <dl><dt>今</dt><dd>打ち合わせ・議事録・日程の管理。</dd>
+      <dt>期間中</dt><dd>集まり具合を見ながら、LINE・SNSで何を出すかを決めて動きます。</dd></dl></div>
+
+    <div class="item todo"><div class="ih"><span class="no">9</span><h3>リール動画 3本</h3><span class="chip">これから</span></div>
+      <dl><dt>済</dt><dd>まだ手をつけていません。</dd>
+      <dt>次</dt><dd>編集はこちらでします。<br>ながたかさんには、スマホで撮った短い動画（1本15〜30秒）をお願いしたいです。<br>撮る内容は、こちらでメモにしてお渡しします。</dd></dl></div>
+
+    <div class="item doing"><div class="ih"><span class="no">10</span><h3>コラボ放送・広げる工夫</h3><span class="chip">進めている</span></div>
+      <dl><dt>済</dt><dd>さおりさんとの生放送（9/8）・寅の会（11/2）。</dd>
+      <dt>調整中</dt><dd>深澤さん（日程調整中）・中島侑子さん（11/18出版のあと）・青木ゆうたさん・ザッキーさん。<br>期間中のどこに入れるかを決めたいです。</dd></dl></div>
+
+    <div class="item doing"><div class="ih"><span class="no">11</span><h3>会社をつくったあとの相談</h3><span class="chip">進めている</span></div>
+      <dl><dt>今</dt><dd>会社名は「健康寿命デザイン研究所（仮）」のままです。</dd>
+      <dt>次</dt><dd>会社ができたら、LPと会社向けページを会社のホームページに移して、ずっと使える形にします。</dd></dl></div>
+
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="chap"><i>03</i>これからの3つ</p>
+  <h2>まだの3つは、<br>公開日に間に合わせます。</h2>
+  <div class="prio">
+    <div class="pc"><h3>Note記事 4本</h3>
+      <p>検索から来た人を、想いのLPに連れてくる記事です。<br>公開前に2本、期間中に2本出します。</p>
+      <p class="ask"><b>お願い</b>　下書きをお送りするので、専門の中身に間違いがないかだけ見てください。1本10分ほどです。</p></div>
+    <div class="pc"><h3>X・Instagramの告知の文</h3>
+      <p>前日・当日・中間・ラスト2日の4場面ぶん。<br>そのまま貼れる文と、ストーリーズ用の画像をセットにします。</p>
+      <p class="ask"><b>お願い</b>　ながたかさんの口調に合っているかを見てください。</p></div>
+    <div class="pc"><h3>リール動画 3本</h3>
+      <p>①予告（11/20）②始まりました（11/22）③ラストスパート（12/14）の3本です。</p>
+      <p class="ask"><b>お願い</b>　短い動画を撮っていただきたいです。<br>1本目の分は、11月18日までにいただけると助かります。</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="chap"><i>04</i>12月までの予定</p>
+  <h2>11月22日に向けて、<br>そのあと12月20日まで。</h2>
+  <p style="font-size:14.5px;margin:-4px 0 14px"><span class="who w-f">fulfull</span>森川・こちら側　<span class="who w-n">ながたか</span>ながたかさん　<span class="who w-o">尾道</span>尾道さん　<span class="who w-a">みんな</span>3人</p>
+  <ol class="tl">
+    <li><div class="dt">11/13〜16</div><div class="bx"><b>まだの3つを作り始める</b><ul>
+      <li><span class="who w-f">fulfull</span>Note ①②の下書き・SNSの文の作り直し・リールの撮影メモ</li>
+      <li><span class="who w-o">尾道</span>CAMPFIREの審査の確認</li></ul></div></li>
+    <li class="big"><div class="dt">11/17〜19<small>次のZoom</small></div><div class="bx"><b>次のZoom（下の「決めたいこと」）</b><ul>
+      <li><span class="who w-n">ながたか</span>Note ①②の確認・リール1本目の撮影</li>
+      <li><span class="who w-f">fulfull</span>SNSの文をお渡し（18日まで）</li></ul></div></li>
+    <li><div class="dt">11/18<small>水</small></div><div class="bx"><b>中島侑子さんの本の発売日</b><ul><li><span class="who w-n">ながたか</span>このあとコラボの日程を相談</li></ul></div></li>
+    <li><div class="dt">11/19<small>木</small></div><div class="bx"><b>Note ① 公開</b></div></li>
+    <li><div class="dt">11/20<small>金</small></div><div class="bx"><b>リール ①「予告」公開</b></div></li>
+    <li class="big"><div class="dt">11/21<small>土</small></div><div class="bx"><b>前日</b><ul>
+      <li><span class="who w-f">fulfull</span>20:00 LINE「明日の朝、始まります」（声つき）</li>
+      <li><span class="who w-n">ながたか</span>X・Instagramに前日の投稿</li></ul></div></li>
+    <li class="big"><div class="dt">11/22<small>日・初日</small></div><div class="bx"><b>クラファン開始</b><ul>
+      <li><span class="who w-f">fulfull</span>7:00 LINE「始まりました」（声つき）・LPを期間中の版に</li>
+      <li><span class="who w-n">ながたか</span>Voicyとオープンチャットでお知らせ</li>
+      <li><span class="who w-f">fulfull</span>リール ②「始まりました」・Note ② 公開</li></ul></div></li>
+    <li><div class="dt">11/27<small>金</small></div><div class="bx"><b>会社の方だけにLINE</b></div></li>
+    <li><div class="dt">11/30<small>月</small></div><div class="bx"><b>寅の会（11月末には静岡オフ会も）</b><ul><li><span class="who w-n">ながたか</span>中盤の呼びかけ</li></ul></div></li>
+    <li><div class="dt">12/1ごろ</div><div class="bx"><b>Note ③ 公開</b></div></li>
+    <li class="big"><div class="dt">12/6<small>日</small></div><div class="bx"><b>中間のご報告</b><ul>
+      <li><span class="who w-n">ながたか</span>声（12/6 15時まで）</li>
+      <li><span class="who w-f">fulfull</span>LINE・中間の画像・SNSの文</li></ul></div></li>
+    <li><div class="dt">12/10ごろ</div><div class="bx"><b>Note ④ 公開</b></div></li>
+    <li><div class="dt">12/13<small>日</small></div><div class="bx"><b>残り1週間</b><ul><li><span class="who w-f">fulfull</span>LINE・リール ③「ラストスパート」（12/14）</li></ul></div></li>
+    <li><div class="dt">12/18<small>金</small></div><div class="bx"><b>残り2日</b><ul><li><span class="who w-f">fulfull</span>LINE・SNSの文</li><li><span class="who w-n">ながたか</span>最終日の声（12/19まで）</li></ul></div></li>
+    <li class="big"><div class="dt">12/20<small>日・最終日</small></div><div class="bx"><b>最終日</b><ul><li><span class="who w-f">fulfull</span>朝のLINE（声つき）</li><li><span class="who w-a">みんな</span>14〜17時 田町のイベント</li></ul></div></li>
+    <li><div class="dt">12/21<small>月</small></div><div class="bx"><b>お礼</b><ul><li><span class="who w-n">ながたか</span>お礼の声（12/21 17時まで）</li><li><span class="who w-f">fulfull</span>LINEでお礼</li></ul></div></li>
+    <li><div class="dt">12/21〜</div><div class="bx"><b>そのあと</b><ul>
+      <li><span class="who w-f">fulfull</span>LPを「会社の紹介とLINE登録」のページに・会社向けページからクラファンの話を外す</li>
+      <li><span class="who w-a">みんな</span>リターンのお届けの段取り・会社の設立</li></ul></div></li>
+  </ol>
+  <p class="note">CAMPFIREの審査の結果しだいで、11/21・22の予約とLPの入れ替えの時間が動きます。<br>Note・リールの日付は目安です。次のZoomで一緒に決めさせてください。</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="chap"><i>05</i>次のZoomで</p>
+  <h2>決めたいこと。</h2>
+  <ol class="agenda">
+    <li><div><b>会社名</b><span>「（仮）」のまま始めるか、決めて始めるか。</span></div></li>
+    <li><div><b>リールの撮影</b><span>3本ぶんの撮る内容と、いつ撮るか。1本目は11/18までにいただけると助かります。</span></div></li>
+    <li><div><b>Note 4本の出す順番</b><span>テーマ4つの順番と、確認のしかた。</span></div></li>
+    <li><div><b>コラボを期間中のどこに入れるか</b><span>深澤さん・中島侑子さん・青木ゆうたさん・ザッキーさん・さおりさん。</span></div></li>
+    <li><div><b>CAMPFIREの審査</b><span>結果の見通しと、URLが出る日（尾道さん）。</span></div></li>
+    <li><div><b>推薦文</b><span>さおりさん・バッシーさん・タケオさんにお願いする件が、いまどうなっているか。</span></div></li>
+    <li><div><b>最初の写真</b><span>ごはんだけのどんぶりか、ブロッコリーの載った版か。</span></div></li>
+  </ol>
+</div></section>
+
+<footer>ながたか（永澤 貴昭）クラウドファンディング｜進め方の共有<br>fulfull株式会社</footer>
+</body></html>
