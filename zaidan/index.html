@@ -7,22 +7,21 @@
 <meta property="og:title" content="研究所の仲間を、一緒に探してくれる財団。">
 <meta property="og:description" content="横浜の木原記念横浜生命科学振興財団と出会いました。研究所でできること、進め方の案、ながたかさんに聞きたいこと。">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/zaidan/og.png">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/zaidan/og.png?v=2">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Shippori+Mincho:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
 <style>
-:root{--green:#2F6B4A;--deep:#173D2B;--forest:#0C2A1D;--leaf:#EEF2E8;--gold:#B49A5E;--ink:#1e2622;--muted:#586660;--bg:#FAFAF6;--paper:#fff;--hair:#E2E5DA;--goldbg:#F6EFD9;--goldtx:#8A6A1F;
---mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--goldgrad:linear-gradient(100deg,#9c8348 0%,#e6d7a8 45%,#b49a5e 70%,#8d7740 100%)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#E6EBE5;--muted:#A9B5AE;--bg:#0E1A14;--paper:#15241C;--hair:#2A3B32;--leaf:#1B2C23;--forest:#E9F0E9;--deep:#CFE3D5;--green:#8FC4A2;--goldbg:#3A321C;--goldtx:#E2C77E;color-scheme:dark}}
-:root[data-theme="dark"]{--ink:#E6EBE5;--muted:#A9B5AE;--bg:#0E1A14;--paper:#15241C;--hair:#2A3B32;--leaf:#1B2C23;--forest:#E9F0E9;--deep:#CFE3D5;--green:#8FC4A2;--goldbg:#3A321C;--goldtx:#E2C77E;color-scheme:dark}
+/* いつもの緑系（ティール×金）・白地で明るく。暗い表示にはしない */
+:root{--green:#0E7C86;--deep:#0A5A62;--forest:#0A5A62;--leaf:#EEF6F7;--gold:#D9A441;--ink:#1C3236;--muted:#4A6468;--bg:#F6FBFB;--paper:#fff;--hair:#D5E4E6;--goldbg:#FBF4E3;--goldtx:#A87A1F;
+--mincho:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Noto Sans JP",sans-serif;--goldgrad:linear-gradient(100deg,#A87A1F 0%,#D9A441 60%,#C08E2E 100%);color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;font-weight:500;font-size:17px;line-height:1.9;-webkit-text-size-adjust:100%}
-h1,h2,h3{font-family:var(--mincho);font-weight:800;letter-spacing:.04em;line-height:1.5;margin:0;color:var(--forest);text-wrap:balance}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;font-weight:500;font-size:18px;line-height:1.9;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--mincho);font-weight:800;letter-spacing:.03em;line-height:1.5;margin:0;color:var(--forest);text-wrap:balance}
 p{margin:0;text-wrap:pretty}
 p+p{margin-top:12px}
 .wrap{max-width:760px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
-header{padding:34px 0 28px;border-bottom:1px solid var(--hair);background:radial-gradient(120% 80% at 85% 0%,rgba(180,154,94,.16),transparent 60%)}
+header{padding:34px 0 28px;border-bottom:1px solid var(--hair);background:radial-gradient(120% 90% at 90% 0%,rgba(14,124,134,.14),transparent 60%),radial-gradient(80% 70% at 0% 100%,rgba(217,164,65,.10),transparent 60%),#fff}
 .kick{display:inline-block;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.14em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:4px 2px}
 h1{font-size:clamp(25px,6.8vw,40px);margin-top:16px}
 .lead{margin-top:14px;color:var(--muted);font-size:16px}
@@ -38,6 +37,7 @@ h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
 .facts li::before{content:"";position:absolute;left:16px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
 .cards{display:flex;flex-direction:column;gap:12px}
 .card{background:var(--paper);border-radius:8px;padding:16px 16px 14px;box-shadow:0 0 0 1px var(--hair);border-left:5px solid var(--green)}
+.card:nth-child(even){border-left-color:var(--gold)}
 .card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
 .tag{font-size:12px;font-weight:700;border-radius:4px;padding:0 8px;line-height:1.9;background:var(--leaf);color:var(--green)}
 .tag.j{background:var(--goldbg);color:var(--goldtx)}
