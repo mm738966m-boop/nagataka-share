@@ -48,6 +48,7 @@ h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
 .case{background:var(--paper);border-radius:8px;padding:12px 16px;box-shadow:0 0 0 1px var(--hair)}
 .case b{display:block;font-size:16px}
 .case span{display:block;font-size:15px;color:var(--muted);line-height:1.75;margin-top:2px}
+.case .lk{margin-top:10px;background:var(--bg)}
 .note{font-size:14px;color:var(--muted);margin-top:12px}
 .tl{list-style:none;margin:0;padding:0;position:relative}
 .tl::before{content:"";position:absolute;left:96px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--hair))}
@@ -65,6 +66,17 @@ h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
 .qs>li::before{content:counter(q);font-family:var(--mincho);font-weight:800;font-size:24px;line-height:1.3;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .qs b{display:block;font-size:17px;line-height:1.6}
 .qs ul{margin:6px 0 0;padding-left:1.1em;font-size:15.5px;color:var(--muted);line-height:1.8}
+.lks{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.lk{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:center;background:var(--paper);border-radius:8px;padding:10px;box-shadow:0 0 0 1px var(--hair);text-decoration:none;color:var(--ink);transition:box-shadow .2s}
+.lk:hover,.lk:focus-visible{box-shadow:0 0 0 2px var(--gold);outline:none}
+.lk img{width:100%;height:auto;aspect-ratio:640/336;object-fit:cover;border-radius:5px;display:block;background:var(--leaf)}
+.lt{min-width:0;display:flex;flex-direction:column;gap:2px;line-height:1.55}
+.lt small{font-size:12px;font-weight:700;color:var(--green);letter-spacing:.04em}
+.lt b{font-size:15px;font-weight:700}
+.lt em{font-style:normal;font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.card .lk{margin-top:10px;box-shadow:0 0 0 1px var(--hair);background:var(--bg)}
+.lkh{font-size:14px;font-weight:700;color:var(--muted);margin-top:22px}
+@media (max-width:420px){.lk{grid-template-columns:112px 1fr;gap:12px}.lt b{font-size:14.5px}}
 footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)}
 @media (max-width:420px){.tl::before{left:80px}.tl>li{grid-template-columns:72px 1fr;gap:18px}.tl>li::before{left:75px}}
 @media print{body{font-size:12px}header{background:none}section{padding:20px 0}.card,.case,.qs>li,.tl>li{break-inside:avoid}}
@@ -93,6 +105,12 @@ footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
     <li>大学の先生が作った「筋肉の疲れを見える化する装置」や「転倒を防ぐ靴」なども、ここから生まれています。</li>
   </ul>
   <p class="note">運動・予防の事例はありますが、食・栄養の事例はまだ見当たりませんでした。<br>ながたかさんが「食と運動」の最初の1件になれるかもしれません。</p>
+  <p class="lkh">財団のサイトと、支えた研究の例</p>
+  <div class="lks">
+    <a class="lk" href="https://kihara.or.jp/" target="_blank" rel="noopener"><img src="img/kihara.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>財団の公式サイト</small><b>木原記念横浜生命科学振興財団</b><em>kihara.or.jp</em></span></a>
+    <a class="lk" href="https://kihara.or.jp/supportcase/supportcase-129-2/" target="_blank" rel="noopener"><img src="img/case-kanagawa.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>支えた研究の例（神奈川大学）</small><b>筋肉の疲れを、体温のように測る装置の開発</b><em>kihara.or.jp</em></span></a>
+    <a class="lk" href="https://kihara.or.jp/supportcase/" target="_blank" rel="noopener"><img src="img/cases.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>支えた研究の一覧</small><b>財団の支援事例をまとめたページ</b><em>kihara.or.jp</em></span></a>
+  </div>
 </div></section>
 
 <section><div class="wrap">
@@ -102,17 +120,21 @@ footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
     <div class="card"><div class="tags"><span class="tag">研究</span><span class="tag">地域・企業との共創</span></div>
       <h3>組む相手を紹介してもらえる</h3>
       <p>測定機器の会社、食品の会社、大学の研究室など、一緒に研究や実証をする相手を、財団が間に入って探してくれます。<br>無料で相談できる場所も横浜（鶴見）にあります。</p>
-      <p class="ex">例：活動量計の会社と組んで、食事調査と合わせた実証をする。会社向けプログラムの「根拠」になります。</p></div>
+      <p class="ex">例：活動量計の会社と組んで、食事調査と合わせた実証をする。会社向けプログラムの「根拠」になります。</p>
+      <a class="lk" href="https://biblio.yokohama/" target="_blank" rel="noopener"><img src="img/biblio.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>無料で相談できる場所（鶴見）</small><b>YOKOHAMA BIBLIO</b><em>biblio.yokohama</em></span></a></div>
     <div class="card"><div class="tags"><span class="tag">研究</span><span class="tag">発信</span></div>
       <h3>研究者と会社の集まりに入れる</h3>
-      <p>財団が事務局の会員ネットワーク（約130の会社・機関）に入ると、定例会やヘルスケアの研究会で、企業の担当者と顔を合わせられます。<br>大学の研究者は会費が無料です。</p></div>
+      <p>財団が事務局の会員ネットワーク（約130の会社・機関）に入ると、定例会やヘルスケアの研究会で、企業の担当者と顔を合わせられます。<br>大学の研究者は会費が無料です。</p>
+      <a class="lk" href="https://www.bva.jp/" target="_blank" rel="noopener"><img src="img/bva.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>財団が事務局のネットワーク</small><b>バイオベンチャーアライアンス（BVA）</b><em>bva.jp</em></span></a></div>
     <div class="card"><div class="tags"><span class="tag">健康づくり支援</span><span class="tag">地域・企業との共創</span></div>
       <h3>会社向けセミナーの届け先が広がる</h3>
       <p>横浜市には、健康経営に取り組む会社が960以上あり、食生活や運動の講座を届ける仕組みがあります。<br>財団のつながりで、講座を届ける側に入れる可能性があります。</p>
-      <p class="ex">クラファンの「会社向けセミナー」と同じ中身を、横浜の会社に届けるイメージです。</p></div>
+      <p class="ex">クラファンの「会社向けセミナー」と同じ中身を、横浜の会社に届けるイメージです。</p>
+      <a class="lk" href="https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/kenko-iryo/kenkozukuri/kankyodukuri/life_style/ninsho/" target="_blank" rel="noopener"><img src="img/kenkokeiei.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>横浜市の制度</small><b>横浜健康経営認証</b><em>city.yokohama.lg.jp</em></span></a></div>
     <div class="card"><div class="tags"><span class="tag">研究</span><span class="tag j">来年4〜5月</span></div>
       <h3>研究の助成金に申し込める（かもしれない）</h3>
-      <p>上限200万円で、経費の全額が補助される助成金です。毎年4〜5月に募集があります。<br>横浜に拠点があることが条件なので、市内の大学と組めば申し込めるかを、大澤さんに確認します。</p></div>
+      <p>上限200万円で、経費の全額が補助される助成金です。毎年4〜5月に募集があります。<br>横浜に拠点があることが条件なので、市内の大学と組めば申し込めるかを、大澤さんに確認します。</p>
+      <a class="lk" href="https://www.city.yokohama.lg.jp/city-info/koho-kocho/press/keizai/2026/0706trialsaitaku.html" target="_blank" rel="noopener"><img src="img/trial.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>今年選ばれた8件（転倒を防ぐ靴の研究も）</small><b>横浜市トライアル助成金 令和8年度の交付先</b><em>city.yokohama.lg.jp</em></span></a></div>
     <div class="card"><div class="tags"><span class="tag">発信</span></div>
       <h3>企業の前で話せる場がある</h3>
       <p>財団は、研究者が企業に向けて話すイベントを開いています。<br>「クラファンで研究所を作った先生」の話は、企業の人にも届きやすいと思います。</p></div>
@@ -123,9 +145,12 @@ footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)
   <p class="chap"><i>04</i>似た先生の例</p>
   <h2>研究者が、会社や自治体と組んで<br>事業を育てています。</h2>
   <div class="cases">
-    <div class="case"><b>筑波大学の先生の会社</b><span>自治体の健康まちづくりを、20年で100以上の自治体に届けています。</span></div>
-    <div class="case"><b>京都大学で博士号を取った人の会社</b><span>腰痛対策のアプリを、測定機器の大手メーカーと一緒に検証し、会社の健康づくりに届けています。</span></div>
-    <div class="case"><b>スポーツ栄養の一般社団法人</b><span>会社員向けの講座、食品の監修、栄養士の独立支援を組み合わせています。</span></div>
+    <div class="case"><b>つくばウエルネスリサーチ（筑波大学の先生が代表）</b><span>自治体の健康まちづくりを、20年で100以上の自治体に届けています。</span>
+      <a class="lk" href="https://www.twr.jp/" target="_blank" rel="noopener"><img src="img/twr.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>会社のサイト</small><b>つくばウエルネスリサーチ</b><em>twr.jp</em></span></a></div>
+    <div class="case"><b>バックテック（京都大学で博士号を取った人の会社）</b><span>腰痛・肩こり対策のアプリを、オムロン ヘルスケアと一緒に検証し、会社の健康づくりに届けています。</span>
+      <a class="lk" href="https://kyodonewsprwire.jp/release/201909181000" target="_blank" rel="noopener"><img src="img/backtech.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>共同研究のお知らせ（2019年）</small><b>バックテックとオムロン ヘルスケアが共同で実証研究を開始</b><em>kyodonewsprwire.jp</em></span></a></div>
+    <div class="case"><b>日本スポーツ栄養協会（一般社団法人）</b><span>会社員向けの講座、食品の監修、栄養士の独立支援を組み合わせています。</span>
+      <a class="lk" href="https://sndj.jp/" target="_blank" rel="noopener"><img src="img/sndj.jpg" alt="" width="640" height="336" loading="lazy"><span class="lt"><small>協会のサイト</small><b>一般社団法人 日本スポーツ栄養協会</b><em>sndj.jp</em></span></a></div>
   </div>
   <p class="note">どれも「研究者の信頼」と「会社・自治体と組んだ実証」をかけ合わせて、続く仕事にしています。</p>
 </div></section>
