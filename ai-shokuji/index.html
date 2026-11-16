@@ -9,8 +9,7 @@
 <meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/ai-shokuji/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-:root{--teal:#0E7C86;--deep:#0A5A62;--gold:#B8860B;--ink:#1c2a2e;--muted:#566469;--hair:#dfe7e7;--bg:#f3f7f6;--paper:#fff;--soft:#e3f1f0;--goldbg:#fbf3dc;--goldline:#ecd9a0;--line:#06C755;--linebg:#e6f9ee;--warn:#b4460f;--warnbg:#fff3ea;--warnline:#f6d4b4}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--teal:#4fd0c6;--deep:#86e6dc;--gold:#f0c95a;--ink:#e7f0ef;--muted:#a5b6b6;--hair:#2a3a3c;--bg:#10191b;--paper:#182326;--soft:#1d3336;--goldbg:#2f2710;--goldline:#5a4a1c;--line:#35d67a;--linebg:#143024;--warn:#ffb277;--warnbg:#33210f;--warnline:#54371b}}
+:root{--teal:#0E7C86;--deep:#0A5A62;--gold:#B8860B;--ink:#1c2a2e;--muted:#566469;--hair:#dfe7e7;--bg:#f3f7f6;--paper:#fff;--soft:#e3f1f0;--goldbg:#fbf3dc;--goldline:#ecd9a0;--line:#06C755;--linebg:#e6f9ee;--warn:#b4460f;--warnbg:#fff3ea;--warnline:#f6d4b4;color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;font-weight:500;line-height:1.8;font-size:18px;-webkit-text-size-adjust:100%}
 .page{max-width:720px;margin:0 auto;padding:28px 16px 72px;display:flex;flex-direction:column;gap:18px}
@@ -38,9 +37,7 @@ h3{font-size:18px;font-weight:800;color:var(--deep)}
 .node.lp{border-color:var(--teal)}
 .node.ln{background:var(--linebg);border-color:var(--line)}
 .node.ln small{color:#058a3c}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .node.ln small{color:var(--line)}}
 .node.go{background:var(--deep);border-color:var(--deep);color:#fff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .node.go{background:#0d4a50;border-color:#0d4a50}}
 .node.go small{color:#bfe9e4}.node.go span{color:#e3f1f0}
 .node.af{background:var(--goldbg);border-color:var(--goldline)}
 .node.af small{color:var(--gold)}
@@ -50,7 +47,6 @@ h3{font-size:18px;font-weight:800;color:var(--deep)}
 .chips i{font-style:normal;font-size:14px;font-weight:700;background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:2px 11px;color:var(--ink)}
 /* 登録直後 */
 .phone{background:#8fb7d9;border-radius:22px;padding:16px 12px;display:flex;flex-direction:column;gap:10px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .phone{background:#2b4257}}
 .bub{align-self:flex-start;max-width:88%;background:#fff;color:#1c2a2e;border-radius:4px 18px 18px 18px;padding:10px 14px;font-size:16px;line-height:1.7}
 .bub.voice{display:flex;align-items:center;gap:10px;font-weight:700}
 .bub.voice::before{content:"";width:0;height:0;border:9px solid transparent;border-left:14px solid #06C755;margin-left:4px}
@@ -70,7 +66,6 @@ h3{font-size:18px;font-weight:800;color:var(--deep)}
 .cal dd small{display:block;font-size:14.5px;color:var(--muted)}
 .tag{display:inline-block;font-size:12.5px;font-weight:800;border-radius:6px;padding:0 8px;margin-right:6px;line-height:1.8;vertical-align:1px}
 .tag.l{background:var(--linebg);color:#058a3c}.tag.v{background:var(--soft);color:var(--deep)}.tag.c{background:var(--goldbg);color:var(--gold)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.l{color:var(--line)}}
 .cal .peak{background:var(--goldbg);border:1px solid var(--goldline);border-radius:14px;padding:12px;margin:4px -6px}
 /* 24時間 */
 .day{display:grid;grid-template-columns:62px 1fr;gap:0 12px}
@@ -84,9 +79,7 @@ th,td{padding:9px 4px;border-bottom:1px solid var(--hair);text-align:center;font
 th{background:var(--soft);font-size:14.5px}
 td:first-child,th:first-child{text-align:left;font-weight:800}
 td.ok{color:#058a3c;font-weight:800}td.ng{color:var(--warn);font-weight:800;background:var(--warnbg)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) td.ok{color:var(--line)}}
 .reco{background:var(--deep);color:#fff;border-radius:16px;padding:16px}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .reco{background:#0d4a50}}
 .reco b{display:block;font-size:20px;font-weight:800;line-height:1.5}
 .reco span{display:block;font-size:16px;opacity:.92}
 .note{background:var(--soft);border-radius:14px;padding:14px;font-size:17px}
