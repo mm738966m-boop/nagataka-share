@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>これからの予定と、それぞれのやること｜ながたかクラファン</title>
+<meta property="og:title" content="これからの予定と、それぞれのやること。">
+<meta property="og:description" content="11/16のZoomで決まったことをもとに、12/20の最終日までの流れと、3人それぞれのやることをまとめました。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mm738966m-boop.github.io/nagataka-share/plan/">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/plan/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+<style>
+/* いつもの緑系（ティール×金）・白地で明るく。暗い表示にはしない */
+:root{--green:#0E7C86;--deep:#0A5A62;--forest:#0A5A62;--leaf:#EEF6F7;--gold:#D9A441;--goldsoft:#F1DDA8;--ink:#1C3236;--muted:#4A6468;--bg:#F6FBFB;--paper:#fff;--hair:#D5E4E6;
+--done:#0E7C86;--doneBg:#E2F3F4;--doing:#A87A1F;--doingBg:#FBF1DA;--todo:#2F6DB5;--todoBg:#E6EFFA;
+--mincho:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Noto Sans JP",sans-serif;--goldgrad:linear-gradient(100deg,#A87A1F 0%,#D9A441 60%,#C08E2E 100%);color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;font-weight:500;font-size:18px;line-height:1.9;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--mincho);font-weight:800;letter-spacing:.03em;line-height:1.5;margin:0;color:var(--forest);text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+header{padding:34px 0 26px;border-bottom:1px solid var(--hair);background:radial-gradient(120% 90% at 90% 0%,rgba(14,124,134,.14),transparent 60%),radial-gradient(80% 70% at 0% 100%,rgba(217,164,65,.12),transparent 60%),#fff}
+.kick{display:inline-block;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.14em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:4px 2px}
+h1{font-size:clamp(28px,7.4vw,40px);margin-top:16px}
+.lead{margin-top:14px;color:var(--muted);font-size:16px}
+section{padding:40px 0;border-bottom:1px solid var(--hair)}
+.chap{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.18em}
+.chap i{font-style:normal;font-family:var(--mincho);font-size:26px;line-height:1;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chap::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
+/* 集計 */
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.sum div{background:var(--paper);border-radius:8px;padding:14px 8px;text-align:center;box-shadow:0 0 0 1px var(--hair)}
+.sum b{display:block;font-family:var(--mincho);font-size:34px;line-height:1.2}
+.sum span{font-size:13.5px;font-weight:700}
+.sum .d b,.sum .d span{color:var(--done)}.sum .g b,.sum .g span{color:var(--doing)}.sum .t b,.sum .t span{color:var(--todo)}
+.bar{display:flex;height:10px;border-radius:99px;overflow:hidden;margin-top:14px;background:var(--hair)}
+.bar i{display:block}.bar .d{background:var(--done)}.bar .g{background:var(--doing)}.bar .t{background:var(--todo)}
+/* 項目カード */
+.items{display:flex;flex-direction:column;gap:12px}
+.item{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:16px 16px 14px;border-left:5px solid var(--c)}
+.item.done{--c:var(--done)}.item.doing{--c:var(--doing)}.item.todo{--c:var(--todo)}
+.ih{display:flex;align-items:flex-start;gap:10px}
+.no{flex:none;font-family:var(--mincho);font-weight:800;font-size:20px;color:var(--c);line-height:1.5;width:26px}
+.ih h3{flex:1;font-size:18px;font-family:"Noto Sans JP",sans-serif;font-weight:700;letter-spacing:.02em;color:var(--ink)}
+.chip{flex:none;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:99px;color:var(--c);background:var(--bg2);white-space:nowrap;margin-top:3px}
+.done .chip{--bg2:var(--doneBg)}.doing .chip{--bg2:var(--doingBg)}.todo .chip{--bg2:var(--todoBg)}
+.item dl{margin:10px 0 0 36px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:15.5px;line-height:1.75}
+.item dt{font-weight:700;color:var(--muted);white-space:nowrap}
+.item dd{margin:0}
+/* 優先 */
+.prio{display:flex;flex-direction:column;gap:12px}
+.pc{background:var(--paper);border-radius:8px;padding:16px;box-shadow:0 0 0 1px var(--gold)}
+.pc h3{font-size:19px}
+.pc p{margin-top:6px;font-size:15.5px}
+.pc .opt{margin:6px 0 0;padding-left:1.1em;font-size:15px;line-height:1.75}.pc .opt li+li{margin-top:4px}
+.pc .ask{margin-top:10px;padding:10px 12px;border-radius:6px;background:var(--leaf);font-size:15px}
+.pc .ask b{color:var(--green)}
+/* 予定 */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:78px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--hair))}
+.tl>li{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:10px 0;position:relative}
+.tl>li::before{content:"";position:absolute;left:73px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 2px var(--gold)}
+.tl>li.big::before{background:var(--gold)}
+.tl .dt{font-weight:700;font-size:14.5px;line-height:1.5;padding-top:6px;color:var(--deep)}
+.tl .dt small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+.tl .bx{background:var(--paper);border-radius:8px;padding:10px 14px;box-shadow:0 0 0 1px var(--hair)}
+.tl>li.big .bx{box-shadow:0 0 0 1.5px var(--gold)}
+.tl .bx b{display:block;font-size:16px;line-height:1.6}
+.tl .bx ul{margin:4px 0 0;padding-left:1.1em;font-size:15px;line-height:1.75}
+.who{display:inline-block;font-size:11.5px;font-weight:700;border-radius:4px;padding:0 6px;margin-right:4px;vertical-align:1px;line-height:1.7}
+.w-f{background:var(--leaf);color:var(--green)}.w-n{background:var(--doingBg);color:var(--doing)}.w-o{background:#E8E6F3;color:#4B4485}.w-a{background:var(--hair);color:var(--muted)}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+/* 決めたいこと */
+.agenda{counter-reset:a;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.agenda li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:10px;background:var(--paper);border-radius:8px;padding:12px 14px;box-shadow:0 0 0 1px var(--hair)}
+.agenda li::before{content:counter(a);font-family:var(--mincho);font-weight:800;font-size:22px;line-height:1.4;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.agenda b{display:block;font-size:16.5px}
+.flow{background:var(--leaf);border-radius:8px;padding:12px 14px;margin:-4px 0 16px;font-size:15px}
+.flow b{display:block;color:var(--green);margin-bottom:4px}
+.flow ol{margin:0;padding:0;list-style:none}
+.flow li{display:grid;grid-template-columns:48px 1fr;gap:6px;line-height:1.8}
+.flow li span{font-weight:700;color:var(--deep)}
+.bring{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.bring li{background:var(--paper);border-radius:8px;padding:10px 14px 10px 40px;box-shadow:0 0 0 1px var(--hair);position:relative;font-size:16px}
+.bring li::before{content:"";position:absolute;left:15px;top:19px;width:12px;height:12px;border-radius:3px;box-shadow:0 0 0 2px var(--gold)}
+.agenda span{display:block;font-size:15px;color:var(--muted);line-height:1.7}
+footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)}
+@media print{body{font-size:12px}header{background:none}section{padding:20px 0;break-inside:avoid-page}.item,.tl li,.agenda li{break-inside:avoid}}
+
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-chips span{font-size:14px;font-weight:700;color:var(--doing);background:var(--doingBg);border-radius:99px;padding:3px 12px}
+.decided{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.decided li{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:12px 14px 12px 44px;position:relative;font-size:15.5px;line-height:1.8;color:var(--muted)}
+.decided li::before{content:"";position:absolute;left:15px;top:17px;width:18px;height:18px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.decided b{display:block;font-size:17px;color:var(--ink)}
+.phase{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.phase li{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:12px 10px;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.phase li.hl{box-shadow:0 0 0 1.5px var(--gold)}
+.phase span{display:block;font-size:12.5px;font-weight:700;color:var(--green)}
+.phase b{display:block;font-family:var(--mincho);font-weight:800;font-size:17px;color:var(--forest);margin:2px 0 4px;line-height:1.4}
+@media (max-width:640px){.phase{grid-template-columns:1fr}.phase li{display:grid;grid-template-columns:88px 1fr;column-gap:10px}.phase span{grid-row:span 2;padding-top:3px}.phase b{margin:0}}
+.legend{font-size:14px;color:var(--muted);margin:-6px 0 14px;line-height:2.1}
+.legend .who{margin-left:6px}.legend .who:first-child{margin-left:0}
+.todo{background:var(--paper);border-radius:10px;box-shadow:0 0 0 1px var(--hair);padding:16px 16px 8px;margin-bottom:14px}
+.todo h3{font-size:19px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.todo .cnt{margin-left:auto;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted)}
+.todo ul{list-style:none;margin:10px 0 0;padding:0}
+.todo li{position:relative;padding:10px 0 10px 40px;border-top:1px solid var(--hair);font-size:15px;line-height:1.75;color:var(--muted)}
+.todo li b{display:block;font-size:16.5px;color:var(--ink)}
+.todo li em{font-style:normal;display:inline-block;margin-left:6px;font-size:12.5px;font-weight:700;color:var(--doing);background:var(--doingBg);border-radius:4px;padding:0 6px}
+.todo .ck{position:absolute;left:0;top:11px;width:28px;height:28px;border-radius:7px;border:2px solid var(--gold);background:#fff;cursor:pointer;padding:0}
+.todo li.ok .ck{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat;border-color:var(--green)}
+.todo li.ok b{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(14,124,134,.5)}
+.agenda li>div{min-width:0}
+@media print{.todo .ck{border-width:1.5px}.phase{grid-template-columns:repeat(5,1fr)}}
+</style></head><body>
+<header><div class="wrap">
+  <span class="kick">11月18日（水）時点</span>
+  <h1>これからの予定と、<br>それぞれのやること。</h1>
+  <p class="lead">11月16日のZoomで決まったことをもとに、12月20日の最終日までの流れと、3人それぞれのやることをまとめました。<br>終わったものは、左の四角を押すと印がつきます（印はご自分の端末だけに残ります）。</p>
+  <div class="hero-chips"><span>11/22（日）0:00 公開</span><span>12月はじめ 第2弾</span><span>12/2（水）10:00 次のZoom</span></div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="chap"><i>01</i>11/16に決まったこと</div>
+  <h2>公開の予約が入りました。</h2>
+  <ul class="decided">
+    <li><b>11月22日（日）0:00に公開</b>CAMPFIREの審査を通り、公開の予約まで済んでいます。「もうすぐ公開」に出ていて、お気に入りはすでに13人です。</li>
+    <li><b>告知は、前もってどんどん出す</b>オープンチャット・Voicy・X・Instagram・公式LINEで「22日に始まります」を伝えます。お気に入りの数が見える「もうすぐ公開」の画面のスクショも使います。</li>
+    <li><b>会社向けのコースを足す</b>5万円と10万円の2つです。中身はどちらも、ホームページができたらお名前を載せることと、内容のご相談です。</li>
+    <li><b>第2弾は12月に入ったらすぐ</b>柱は「ここで開催してほしい権」（数人で割ってもOK）と、プロテインシェーカーのスターターキット（注文の数＋少しだけ作る）です。</li>
+    <li><b>初日のお願いは「どれがいい？」で</b>「会社をつくる→その応援のクラファン→協力してもらえますか」の順で話し、金額は言わずにページのリンクを送ります。</li>
+    <li><b>活動報告は、Voicyで話す</b>ふだんの放送で話して、そのリンクを公式LINEでもお知らせします。</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>02</i>全体の流れ</div>
+  <h2>5つの区切りで進みます。</h2>
+  <ol class="phase">
+    <li><span>11/18〜21</span><b>告知</b>「22日に始まります」を、使えるところすべてで。</li>
+    <li class="hl"><span>11/22〜30</span><b>スタートダッシュ</b>初日のお願いと、コラボ配信で一気に広げる。</li>
+    <li><span>12/1〜13</span><b>第2弾で後押し</b>新しいコースを出して、もう一度話題にする。</li>
+    <li class="hl"><span>12/14〜20</span><b>ラストスパート</b>残りの日数を伝えて、最後のひと押し。</li>
+    <li><span>12/21〜</span><b>お礼とお届け</b>お礼のご報告、コースのお届け、会社づくりへ。</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>03</i>予定</div>
+  <h2>日にちごとの予定。</h2>
+  <p class="legend"><span class="who w-n">ながたか</span>ながたかさん　<span class="who w-o">尾道</span>尾道さん　<span class="who w-f">fulfull</span>森川・こちら側　<span class="who w-a">みんな</span>3人</p>
+  <ol class="tl">
+    <li><div class="dt">11/18〜21</div><div class="bx"><b>告知の期間</b><ul>
+      <li><span class="who w-n">ながたか</span>オープンチャット・Voicy・X・Instagram・公式LINEで「22日に始まります」（「もうすぐ公開」のスクショも）</li>
+      <li><span class="who w-f">fulfull</span>X・Instagramの文を、貼るだけの形でお渡し</li>
+      <li><span class="who w-o">尾道</span>会社向けの5万円・10万円のコースを追加して審査へ</li>
+    </ul></div></li>
+    <li><div class="dt">11/19<small>木</small></div><div class="bx"><b>Note 1本目</b><ul><li><span class="who w-f">fulfull</span>公開（日にちは目安）</li></ul></div></li>
+    <li><div class="dt">11/20<small>金</small></div><div class="bx"><b>リール 1本目「予告」</b><ul><li><span class="who w-f">fulfull</span>公開（日にちは目安）</li></ul></div></li>
+    <li><div class="dt">11/21<small>土・前日</small></div><div class="bx"><b>前日のお知らせ</b><ul>
+      <li><span class="who w-f">fulfull</span>20:00 公式LINE「明日、始まります」（声つき）</li>
+      <li><span class="who w-n">ながたか</span>X・Instagramに前日の投稿</li>
+    </ul></div></li>
+    <li class="big"><div class="dt">11/22<small>日・初日</small></div><div class="bx"><b>0:00 クラファン公開</b><ul>
+      <li><span class="who w-f">fulfull</span>7:00 公式LINE「始まりました」（声つき）</li>
+      <li><span class="who w-f">fulfull</span>想いのページを期間中の版に替え、公式LINEの下のメニューをクラファン行きに</li>
+      <li><span class="who w-n">ながたか</span>Voicyの概要欄・X・Instagramのプロフィールのリンクを、CAMPFIREのページに</li>
+      <li><span class="who w-n">ながたか</span>初日に応援をお願いしたい方へ、「どれがいい？」とリンクを送る</li>
+      <li><span class="who w-n">ながたか</span>丸ちゃんの10周年の会で、QRコードのカードを配る</li>
+      <li><span class="who w-f">fulfull</span>リール 2本目「始まりました」・Note 2本目</li>
+    </ul></div></li>
+    <li><div class="dt">11/24<small>火</small></div><div class="bx"><b>21:00 コラボ配信</b><ul><li><span class="who w-n">ながたか</span>不健康フェスのご相談の回</li></ul></div></li>
+    <li><div class="dt">11/27<small>金</small></div><div class="bx"><b>12:00 中島侑子さんとのコラボ配信</b><ul><li><span class="who w-f">fulfull</span>会社の方だけに公式LINE</li></ul></div></li>
+    <li><div class="dt">11月末</div><div class="bx"><b>静岡オフ会</b><ul><li><span class="who w-n">ながたか</span>参加の方（約20人）に直接お知らせ</li></ul></div></li>
+    <li class="big"><div class="dt">12/2<small>水</small></div><div class="bx"><b>10:00 次のZoom</b><ul>
+      <li><span class="who w-a">みんな</span>公開から10日の振り返り</li>
+      <li><span class="who w-a">みんな</span>第2弾の中身と金額を決める</li>
+    </ul></div></li>
+    <li class="big"><div class="dt">12月はじめ</div><div class="bx"><b>第2弾のコースを公開</b><ul>
+      <li><span class="who w-o">尾道</span>先に審査に出して、決めた日に公開</li>
+      <li><span class="who w-n">ながたか</span>Voicyで「新しいコースが出ました」</li>
+      <li><span class="who w-f">fulfull</span>公式LINE・SNSでお知らせ・Note 3本目</li>
+    </ul></div></li>
+    <li><div class="dt">12/6<small>日</small></div><div class="bx"><b>中間のご報告</b><ul>
+      <li><span class="who w-n">ながたか</span>声をいただく（15時まで）</li>
+      <li><span class="who w-f">fulfull</span>公式LINE・中間の画像・SNSの文</li>
+    </ul></div></li>
+    <li><div class="dt">12/10ごろ</div><div class="bx"><b>Note 4本目</b><ul><li><span class="who w-f">fulfull</span>公開（日にちは目安）</li></ul></div></li>
+    <li><div class="dt">12/13〜14</div><div class="bx"><b>残り1週間</b><ul><li><span class="who w-f">fulfull</span>公式LINE・リール 3本目「ラストスパート」</li></ul></div></li>
+    <li><div class="dt">12/18<small>金</small></div><div class="bx"><b>残り2日</b><ul>
+      <li><span class="who w-f">fulfull</span>公式LINE・SNSの文</li>
+      <li><span class="who w-n">ながたか</span>最終日の声をいただく（12/19まで）</li>
+    </ul></div></li>
+    <li class="big"><div class="dt">12/20<small>日・最終日</small></div><div class="bx"><b>最終日</b><ul>
+      <li><span class="who w-f">fulfull</span>朝の公式LINE（声つき）</li>
+      <li><span class="who w-a">みんな</span>14〜17時 田町のイベント</li>
+    </ul></div></li>
+    <li><div class="dt">12/21<small>月</small></div><div class="bx"><b>お礼</b><ul>
+      <li><span class="who w-n">ながたか</span>お礼の声をいただく（17時まで）</li>
+      <li><span class="who w-f">fulfull</span>公式LINEでお礼と結果のご報告</li>
+    </ul></div></li>
+    <li><div class="dt">12/21〜</div><div class="bx"><b>そのあと</b><ul>
+      <li><span class="who w-a">みんな</span>コースのお届けの段取り・会社の設立</li>
+      <li><span class="who w-a">みんな</span>木原財団の大澤さんと3人でZoom（12月下旬〜1月で調整中）</li>
+      <li><span class="who w-f">fulfull</span>想いのページを「会社の紹介と公式LINEの登録」のページに</li>
+    </ul></div></li>
+  </ol>
+  <p class="note">Note・リールの日にちは目安です。集まり具合を見ながら、出すものと順番を動かします。</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>04</i>やることリスト</div>
+  <h2>それぞれのやること。</h2>
+
+  <div class="todo" data-who="n">
+    <h3><span class="who w-n">ながたか</span>ながたかさん</h3>
+    <ul>
+      <li data-id="n1"><b>「22日に始まります」の告知</b>オープンチャット・Voicy・X・Instagram・公式LINEで。「もうすぐ公開」のスクショも使う。<em>11/21まで</em></li>
+      <li data-id="n2"><b>初日に応援をお願いする方への声かけ</b>ニックさん・バッシーさん・パーソナリティの方など。「どれがいい？」とリンクを送る。<em>11/22</em></li>
+      <li data-id="n3"><b>直接会って伝える方のリスト</b>ランチなどで会うときに伝える。<em>11月中</em></li>
+      <li data-id="n4" class="ok"><b>QRコードのカード</b>丸ちゃんの10周年の会で配る。カードは作成済み。<em>11/22</em></li>
+      <li data-id="n5"><b>会社名の案をいくつか</b>「健康寿命デザイン株式会社」はすでにあるため。健康経営の言葉が入った名前も。<em>12/2まで</em></li>
+      <li data-id="n6"><b>プロテインシェーカーの金額と個数</b>ラボメンの方に、欲しい人の数も聞く。<em>12/2まで</em></li>
+      <li data-id="n7"><b>年間アドバイザーの中身</b>会社向けにするか、個人向けにするか。相談の回数の上限も。<em>12/2まで</em></li>
+      <li data-id="n8"><b>静岡オフ会でのお知らせ</b><em>11月末</em></li>
+      <li data-id="n9"><b>声を3本</b>中間（12/6 15時まで）・最終日（12/19まで）・お礼（12/21 17時まで）。</li>
+      <li data-id="n10"><b>公式LINEの文で気になるところ</b>3人のグループに投げてください。<em>いつでも</em></li>
+    </ul>
+  </div>
+
+  <div class="todo" data-who="o">
+    <h3><span class="who w-o">尾道</span>尾道さん</h3>
+    <ul>
+      <li data-id="o1"><b>会社向けの5万円・10万円のコースを追加</b>コースの一覧で「会社向け」と分かるように。<em>審査があるので、早めに</em></li>
+      <li data-id="o2"><b>第2弾を先に審査に出せるかの確認</b>決めた日に公開（予約）できるかを、CAMPFIREに確認。<em>12/2まで</em></li>
+    </ul>
+  </div>
+
+  <div class="todo" data-who="f">
+    <h3><span class="who w-f">fulfull</span>森川・こちら側</h3>
+    <ul>
+      <li data-id="f1" class="ok"><b>12/2（水）10:00のZoom</b>カレンダーに登録済み。</li>
+      <li data-id="f2" class="ok"><b>木原財団の大澤さんへご連絡</b>11/18にメール済み。お返事が来たら3人のZoomを組みます。</li>
+      <li data-id="f3"><b>X・Instagram・Noteの文</b>貼るだけの形でお渡し。<em>11/21まで</em></li>
+      <li data-id="f4"><b>22日に貼り替えるリンクの一覧</b>どこを、どのリンクに替えるか。<em>11/21まで</em></li>
+      <li data-id="f5"><b>公式LINEの予約</b>11/21 20:00と11/22 7:00（声つき）。<em>11/21まで</em></li>
+      <li data-id="f6"><b>22日の朝の切り替え</b>想いのページを期間中の版に・公式LINEの下のメニューをクラファン行きに。<em>11/22</em></li>
+      <li data-id="f7"><b>期間中の公式LINE・SNS・リール</b>中間・残り1週間・残り2日・最終日・お礼。<em>12/21まで</em></li>
+    </ul>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>05</i>12/2のZoomで</div>
+  <h2>次に決めること。</h2>
+  <ol class="agenda">
+    <li><div><b>公開から10日の振り返り</b><span>集まり具合と、効いたお知らせ。</span></div></li>
+    <li><div><b>第2弾の中身と金額</b><span>「ここで開催してほしい権」とスターターキット。シェーカーの金額と個数をもとに。</span></div></li>
+    <li><div><b>年間アドバイザーの形</b><span>会社向けか、個人向けか。</span></div></li>
+    <li><div><b>会社名</b><span>ながたかさんの案から。</span></div></li>
+  </ol>
+</div></section>
+
+<footer>ながたか（永澤 貴昭）クラウドファンディング<br>これからの予定とやること｜fulfull株式会社</footer>
+<script>
+(function(){
+  var KEY='nagataka-plan-checks';
+  var st={};
+  try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
+  var items=document.querySelectorAll('.todo li');
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function count(box){
+    var all=box.querySelectorAll('li').length,done=box.querySelectorAll('li.ok').length;
+    var c=box.querySelector('.cnt'); if(c) c.textContent=done+' / '+all;
+  }
+  items.forEach(function(li){
+    var id=li.getAttribute('data-id');
+    if(id in st){li.classList.toggle('ok',!!st[id]);}
+    var b=document.createElement('button');
+    b.type='button';b.className='ck';b.setAttribute('aria-label','終わったら押す');
+    b.setAttribute('aria-pressed',li.classList.contains('ok')?'true':'false');
+    b.addEventListener('click',function(){
+      var on=!li.classList.contains('ok');
+      li.classList.toggle('ok',on);b.setAttribute('aria-pressed',on?'true':'false');
+      st[id]=on;save();count(li.closest('.todo'));
+    });
+    li.insertBefore(b,li.firstChild);
+  });
+  document.querySelectorAll('.todo').forEach(function(box){
+    var h=box.querySelector('h3');var s=document.createElement('span');s.className='cnt';h.appendChild(s);count(box);
+  });
+})();
+</script>
+</body></html>
