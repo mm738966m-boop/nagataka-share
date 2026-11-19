@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>告知の文と、貼り替えるリンク｜ながたかクラファン</title>
+<meta property="og:title" content="告知の文と、貼り替えるリンク。">
+<meta property="og:description" content="X・Instagram・Voicy・オープンチャットにそのまま貼れる文と、11/22に貼り替えるリンクの一覧。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mm738966m-boop.github.io/nagataka-share/sns/">
+<meta property="og:image" content="https://mm738966m-boop.github.io/nagataka-share/sns/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=M+PLUS+Rounded+1c:wght@700;800&display=swap" rel="stylesheet">
+<style>
+/* いつもの緑系（ティール×金）・白地で明るく。暗い表示にはしない */
+:root{--green:#0E7C86;--deep:#0A5A62;--forest:#0A5A62;--leaf:#EEF6F7;--gold:#D9A441;--goldsoft:#F1DDA8;--ink:#1C3236;--muted:#4A6468;--bg:#F6FBFB;--paper:#fff;--hair:#D5E4E6;
+--done:#0E7C86;--doneBg:#E2F3F4;--doing:#A87A1F;--doingBg:#FBF1DA;--todo:#2F6DB5;--todoBg:#E6EFFA;
+--mincho:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Noto Sans JP",sans-serif;--goldgrad:linear-gradient(100deg,#A87A1F 0%,#D9A441 60%,#C08E2E 100%);color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;font-weight:500;font-size:18px;line-height:1.9;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--mincho);font-weight:800;letter-spacing:.03em;line-height:1.5;margin:0;color:var(--forest);text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+header{padding:34px 0 26px;border-bottom:1px solid var(--hair);background:radial-gradient(120% 90% at 90% 0%,rgba(14,124,134,.14),transparent 60%),radial-gradient(80% 70% at 0% 100%,rgba(217,164,65,.12),transparent 60%),#fff}
+.kick{display:inline-block;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.14em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:4px 2px}
+h1{font-size:clamp(28px,7.4vw,40px);margin-top:16px}
+.lead{margin-top:14px;color:var(--muted);font-size:16px}
+section{padding:40px 0;border-bottom:1px solid var(--hair)}
+.chap{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.18em}
+.chap i{font-style:normal;font-family:var(--mincho);font-size:26px;line-height:1;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chap::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+h2{font-size:clamp(22px,5.8vw,28px);margin:12px 0 18px}
+/* 集計 */
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.sum div{background:var(--paper);border-radius:8px;padding:14px 8px;text-align:center;box-shadow:0 0 0 1px var(--hair)}
+.sum b{display:block;font-family:var(--mincho);font-size:34px;line-height:1.2}
+.sum span{font-size:13.5px;font-weight:700}
+.sum .d b,.sum .d span{color:var(--done)}.sum .g b,.sum .g span{color:var(--doing)}.sum .t b,.sum .t span{color:var(--todo)}
+.bar{display:flex;height:10px;border-radius:99px;overflow:hidden;margin-top:14px;background:var(--hair)}
+.bar i{display:block}.bar .d{background:var(--done)}.bar .g{background:var(--doing)}.bar .t{background:var(--todo)}
+/* 項目カード */
+.items{display:flex;flex-direction:column;gap:12px}
+.item{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:16px 16px 14px;border-left:5px solid var(--c)}
+.item.done{--c:var(--done)}.item.doing{--c:var(--doing)}.item.todo{--c:var(--todo)}
+.ih{display:flex;align-items:flex-start;gap:10px}
+.no{flex:none;font-family:var(--mincho);font-weight:800;font-size:20px;color:var(--c);line-height:1.5;width:26px}
+.ih h3{flex:1;font-size:18px;font-family:"Noto Sans JP",sans-serif;font-weight:700;letter-spacing:.02em;color:var(--ink)}
+.chip{flex:none;font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:99px;color:var(--c);background:var(--bg2);white-space:nowrap;margin-top:3px}
+.done .chip{--bg2:var(--doneBg)}.doing .chip{--bg2:var(--doingBg)}.todo .chip{--bg2:var(--todoBg)}
+.item dl{margin:10px 0 0 36px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:15.5px;line-height:1.75}
+.item dt{font-weight:700;color:var(--muted);white-space:nowrap}
+.item dd{margin:0}
+/* 優先 */
+.prio{display:flex;flex-direction:column;gap:12px}
+.pc{background:var(--paper);border-radius:8px;padding:16px;box-shadow:0 0 0 1px var(--gold)}
+.pc h3{font-size:19px}
+.pc p{margin-top:6px;font-size:15.5px}
+.pc .opt{margin:6px 0 0;padding-left:1.1em;font-size:15px;line-height:1.75}.pc .opt li+li{margin-top:4px}
+.pc .ask{margin-top:10px;padding:10px 12px;border-radius:6px;background:var(--leaf);font-size:15px}
+.pc .ask b{color:var(--green)}
+/* 予定 */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:78px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--hair))}
+.tl>li{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:10px 0;position:relative}
+.tl>li::before{content:"";position:absolute;left:73px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 2px var(--gold)}
+.tl>li.big::before{background:var(--gold)}
+.tl .dt{font-weight:700;font-size:14.5px;line-height:1.5;padding-top:6px;color:var(--deep)}
+.tl .dt small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
+.tl .bx{background:var(--paper);border-radius:8px;padding:10px 14px;box-shadow:0 0 0 1px var(--hair)}
+.tl>li.big .bx{box-shadow:0 0 0 1.5px var(--gold)}
+.tl .bx b{display:block;font-size:16px;line-height:1.6}
+.tl .bx ul{margin:4px 0 0;padding-left:1.1em;font-size:15px;line-height:1.75}
+.who{display:inline-block;font-size:11.5px;font-weight:700;border-radius:4px;padding:0 6px;margin-right:4px;vertical-align:1px;line-height:1.7}
+.w-f{background:var(--leaf);color:var(--green)}.w-n{background:var(--doingBg);color:var(--doing)}.w-o{background:#E8E6F3;color:#4B4485}.w-a{background:var(--hair);color:var(--muted)}
+.note{font-size:14px;color:var(--muted);margin-top:12px}
+/* 決めたいこと */
+.agenda{counter-reset:a;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.agenda li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:10px;background:var(--paper);border-radius:8px;padding:12px 14px;box-shadow:0 0 0 1px var(--hair)}
+.agenda li::before{content:counter(a);font-family:var(--mincho);font-weight:800;font-size:22px;line-height:1.4;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.agenda b{display:block;font-size:16.5px}
+.flow{background:var(--leaf);border-radius:8px;padding:12px 14px;margin:-4px 0 16px;font-size:15px}
+.flow b{display:block;color:var(--green);margin-bottom:4px}
+.flow ol{margin:0;padding:0;list-style:none}
+.flow li{display:grid;grid-template-columns:48px 1fr;gap:6px;line-height:1.8}
+.flow li span{font-weight:700;color:var(--deep)}
+.bring{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.bring li{background:var(--paper);border-radius:8px;padding:10px 14px 10px 40px;box-shadow:0 0 0 1px var(--hair);position:relative;font-size:16px}
+.bring li::before{content:"";position:absolute;left:15px;top:19px;width:12px;height:12px;border-radius:3px;box-shadow:0 0 0 2px var(--gold)}
+.agenda span{display:block;font-size:15px;color:var(--muted);line-height:1.7}
+footer{padding:28px 0 46px;text-align:center;font-size:13.5px;color:var(--muted)}
+@media print{body{font-size:12px}header{background:none}section{padding:20px 0;break-inside:avoid-page}.item,.tl li,.agenda li{break-inside:avoid}}
+
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-chips span{font-size:14px;font-weight:700;color:var(--doing);background:var(--doingBg);border-radius:99px;padding:3px 12px}
+.decided{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.decided li{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:12px 14px 12px 44px;position:relative;font-size:15.5px;line-height:1.8;color:var(--muted)}
+.decided li::before{content:"";position:absolute;left:15px;top:17px;width:18px;height:18px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.decided b{display:block;font-size:17px;color:var(--ink)}
+.phase{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.phase li{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:12px 10px;font-size:13.5px;line-height:1.7;color:var(--muted)}
+.phase li.hl{box-shadow:0 0 0 1.5px var(--gold)}
+.phase span{display:block;font-size:12.5px;font-weight:700;color:var(--green)}
+.phase b{display:block;font-family:var(--mincho);font-weight:800;font-size:17px;color:var(--forest);margin:2px 0 4px;line-height:1.4}
+@media (max-width:640px){.phase{grid-template-columns:1fr}.phase li{display:grid;grid-template-columns:88px 1fr;column-gap:10px}.phase span{grid-row:span 2;padding-top:3px}.phase b{margin:0}}
+.legend{font-size:14px;color:var(--muted);margin:-6px 0 14px;line-height:2.1}
+.legend .who{margin-left:6px}.legend .who:first-child{margin-left:0}
+.todo{background:var(--paper);border-radius:10px;box-shadow:0 0 0 1px var(--hair);padding:16px 16px 8px;margin-bottom:14px}
+.todo h3{font-size:19px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.todo .cnt{margin-left:auto;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted)}
+.todo ul{list-style:none;margin:10px 0 0;padding:0}
+.todo li{position:relative;padding:10px 0 10px 40px;border-top:1px solid var(--hair);font-size:15px;line-height:1.75;color:var(--muted)}
+.todo li b{display:block;font-size:16.5px;color:var(--ink)}
+.todo li em{font-style:normal;display:inline-block;margin-left:6px;font-size:12.5px;font-weight:700;color:var(--doing);background:var(--doingBg);border-radius:4px;padding:0 6px}
+.todo .ck{position:absolute;left:0;top:11px;width:28px;height:28px;border-radius:7px;border:2px solid var(--gold);background:#fff;cursor:pointer;padding:0}
+.todo li.ok .ck{background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat;border-color:var(--green)}
+.todo li.ok b{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(14,124,134,.5)}
+.agenda li>div{min-width:0}
+@media print{.todo .ck{border-width:1.5px}.phase{grid-template-columns:repeat(5,1fr)}}
+
+.cfcard{display:block;text-decoration:none;color:inherit;background:#fff;border-radius:10px;box-shadow:0 0 0 1.5px var(--gold);padding:16px;margin-bottom:16px}
+.cf-badge{display:inline-block;font-size:12.5px;font-weight:700;color:#fff;background:var(--green);border-radius:4px;padding:1px 8px}
+.cfcard b{display:block;font-size:17px;line-height:1.6;margin:8px 0 4px;color:var(--ink)}
+.cf-url{font-size:13.5px;color:var(--green);word-break:break-all}
+.points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.points li{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:12px 14px;font-size:15.5px;line-height:1.8;color:var(--muted)}
+.points b{display:block;font-size:16.5px;color:var(--ink)}
+.post{background:var(--paper);border-radius:10px;box-shadow:0 0 0 1px var(--hair);padding:14px 14px 12px;margin-bottom:14px}
+.ph{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;font-weight:700;font-size:16px;margin-bottom:8px}
+.ph .when{margin-left:auto;font-size:12.5px;color:var(--doing);background:var(--doingBg);border-radius:4px;padding:0 6px}
+.sns{font-size:12px;font-weight:700;border-radius:4px;padding:1px 7px;color:#fff}
+.sns.x{background:#1C3236}.sns.ig{background:#B4527A}.sns.oc{background:#06A44B}.sns.vc{background:#E8732C}.sns.dm{background:var(--green)}
+.post pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:15.5px;line-height:1.85;background:var(--bg);border-radius:8px;padding:12px 14px;color:var(--ink)}
+.cp{margin-top:10px;width:100%;min-height:44px;border:0;border-radius:8px;background:var(--green);color:#fff;font:700 15px "Noto Sans JP",sans-serif;cursor:pointer}
+.cp:active{background:var(--deep)}
+.note.top{margin:-6px 0 14px}
+.links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.links li{background:var(--paper);border-radius:8px;box-shadow:0 0 0 1px var(--hair);padding:12px 14px;font-size:15px;line-height:1.75;color:var(--muted)}
+.links b{display:block;font-size:16.5px;color:var(--ink);margin-top:4px}
+</style></head><body>
+<header><div class="wrap">
+  <span class="kick">11月19日（木）時点</span>
+  <h1>告知の文と、<br>貼り替えるリンク。</h1>
+  <p class="lead">X・Instagram・Voicy・オープンチャットで、そのまま貼れる文です。<br>「コピー」を押すと文がまるごとコピーされます。<br>言い方は、ながたかさんの言葉に自由に直してください。</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="chap"><i>01</i>まず知っておくこと</div>
+  <h2>クラファンのページは、<br>もう開けます。</h2>
+  <a class="cfcard" href="https://camp-fire.jp/projects/968831/view" target="_blank" rel="noopener">
+    <span class="cf-badge">CAMPFIRE・もうすぐ公開</span>
+    <b>「病気になってから」ではなく、健康なうちから。栄養と運動で健康を育てる地域へ。</b>
+    <span class="cf-url">camp-fire.jp/projects/968831/view</span>
+  </a>
+  <ul class="points">
+    <li><b>URLは、公開の前もあとも同じです</b>いま貼ったリンクは、22日の0時からそのまま支援のページになります。</li>
+    <li><b>いまは「お気に入り」を集める時期</b>お気に入りが多いほど、公開した日に目立ちます。CAMPFIREの無料の会員登録をして、ページのハートを押してもらうようにお願いします。</li>
+    <li><b>投稿には、リンクを1つだけ</b>迷わせないように、どの投稿もCAMPFIREのページへのリンク1つにしています。</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>02</i>いま〜11/21</div>
+  <h2>「22日に始まります」の告知。</h2>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>お気に入りのお願い<span class="when">11/19〜21・何回でも</span></div>
+<pre>授業のあと、学生は全員エレベーターに乗っていきました。
+正しいことを伝えるだけでは、人は動かない。
+だから「気づいたら健康」を仕組みにする会社をつくります。
+
+11月22日（日）0時、クラウドファンディング開始です。
+いまページのハートを押してもらえると心強いです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>短い版<span class="when">11/19〜21</span></div>
+<pre>11月22日（日）0時、クラウドファンディングを始めます。
+1年中、健康診断の前みたいな自分で。
+そんな毎日をつくる会社を立ち上げます。
+ページのハートで、応援してもらえたらうれしいです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns ig">Instagram</span>ストーリーズ 3枚<span class="when">11/19〜21</span></div>
+<pre>【1枚目】写真＋文字
+11月22日（日）0時
+クラウドファンディング、始めます
+
+【2枚目】文字
+1年中、健康診断の前みたいな自分で。
+頑張らなくても、気づいたら身体にいいことをしている。
+そんな毎日をつくる会社を立ち上げます。
+
+【3枚目】リンクのスタンプ＋カウントダウンのスタンプ
+いまハートを押してもらえると、とても心強いです
+（リンクのスタンプにCAMPFIREのURL・カウントダウンは11/22 0:00）
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns oc">オープンチャット</span>ラボメンのみなさんへ<span class="when">11/19〜21</span></div>
+<pre>みなさん、いつもありがとうございます。
+11月22日（日）0時に、クラウドファンディングが始まります。
+
+いま、CAMPFIREのページで「お気に入り（ハート）」を集めています。
+ハートが多いほど、始まった日に目立つそうです。
+
+CAMPFIREの無料の会員登録をして、ハートを押してもらえるとうれしいです。
+もう押してくださった方、本当にありがとうございます。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns vc">Voicy</span>放送で話すこと（30秒ほど）<span class="when">11/19〜21の放送の最後に</span></div>
+<pre>・11月22日（日）の0時に、クラウドファンディングが始まる
+・会社をつくる理由をひとこと（学生がエレベーターに乗っていった話）
+・いまはCAMPFIREのページで、ハートを押して待っていてもらえるとうれしい
+・リンクは、この放送の概要欄に貼っておきます
+
+概要欄に貼る文：
+11月22日（日）0時から、クラウドファンディングを始めます。
+ページのハートで応援してもらえるとうれしいです。
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>03</i>11/21 前日</div>
+  <h2>「いよいよ明日」。</h2>
+  <div class="post"><div class="ph"><span class="sns x">X</span>前日の投稿<span class="when">11/21（土）夜</span></div>
+<pre>いよいよ明日の0時、クラウドファンディングが始まります。
+
+食べることと、身体を動かすこと。
+2つをひとつながりで見る会社を、ここからつくります。
+
+最初の数時間の応援が、いちばん力になります。
+明日の朝、ページをのぞいてもらえたらうれしいです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns ig">Instagram</span>ストーリーズ<span class="when">11/21（土）夜</span></div>
+<pre>【1枚目】写真＋文字
+いよいよ明日 0時スタート
+
+【2枚目】リンクのスタンプ
+明日の朝、ページをのぞいてもらえたらうれしいです
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>04</i>11/22 初日</div>
+  <h2>「始まりました」。</h2>
+  <div class="post"><div class="ph"><span class="sns x">X</span>初日の投稿（固定しておく）<span class="when">11/22（日）朝</span></div>
+<pre>クラウドファンディング、始まりました。
+
+1年中、健康診断の前みたいな自分で。
+頑張らなくても、気づいたら身体にいいことをしている。
+そんな毎日をつくる会社を立ち上げます。
+
+ページを見てもらえるだけでも、力になります。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns ig">Instagram</span>フィードの投稿<span class="when">11/22（日）</span></div>
+<pre>クラウドファンディング、始まりました。
+
+大学で、食事や身体を動かすことが、どのように健康につながるかを教えています。
+ある日、階段を使うことが身体にどれだけいいかを、データを見せながら話しました。
+授業のあと、学生は全員エレベーターに乗っていきました。
+
+正しいことを伝えるだけでは、人は動かない。
+だから、「気づいたら健康」を仕組みにする会社をつくります。
+
+食べることを、我慢しない。
+運動を、義務にしない。
+それでも身体が整っていく毎日を、ふつうに暮らす人の手に届けたいと考えています。
+
+ページは、プロフィールのリンクからどうぞ。
+見てもらえるだけでも、力になります。
+
+#クラウドファンディング #健康寿命 #スポーツ栄養 #管理栄養士 #健康経営</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns ig">Instagram</span>ストーリーズ<span class="when">11/22（日）</span></div>
+<pre>【1枚目】写真＋文字
+始まりました
+
+【2枚目】リンクのスタンプ
+ページを見てもらえるだけでも、力になります
+https://camp-fire.jp/projects/968831/view
+
+※ストーリーズは「ハイライト」に入れて、期間中ずっと見えるようにしておく</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns dm">DM・LINE</span>初日に応援をお願いするとき<span class="when">11/22（日）</span></div>
+<pre>〔お名前〕さん、ながたかです。
+
+実は、健康の会社をつくることにしました。
+その最初の一歩として、今日からクラウドファンディングを始めています。
+
+もしよければ、協力してもらえませんか。
+いくつかコースがあるので、どれがいいか見てもらえるとうれしいです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>05</i>期間中</div>
+  <h2>中間・第2弾・ラストスパート。</h2>
+  <p class="note top">〔　〕のところは、その日の数字に入れ替えてください。</p>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>中間のご報告<span class="when">12/6（日）</span></div>
+<pre>クラウドファンディングを始めて2週間。
+〔○〕人の方に応援していただきました。
+本当にありがとうございます。
+
+いただいたひとことを読むたびに、会社でやりたいことがはっきりしてきます。
+残り2週間、走りきります。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>新しいコースのお知らせ<span class="when">12月はじめ（第2弾の日）</span></div>
+<pre>新しいコースを追加しました。
+
+〔コースの名前〕
+〔ひとこと説明〕
+
+みなさんの声から生まれたコースです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>残り1週間<span class="when">12/13（日）</span></div>
+<pre>クラウドファンディングは、残り1週間になりました。
+ここまで〔○〕人の方に応援していただいています。
+
+最後まで、走りきります。
+まだページを見ていない方は、のぞいてもらえたらうれしいです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>残り2日<span class="when">12/18（金）</span></div>
+<pre>残り2日になりました。
+
+〔○〕人の方に応援していただいています。
+会社としての最初の一歩を、みなさんと一緒に踏み出したいです。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>最終日<span class="when">12/20（日）朝</span></div>
+<pre>今日が最終日です。
+今夜で締め切りです。
+
+ここまで来られたのは、みなさんのおかげです。
+最後まで、よろしくお願いします。
+
+https://camp-fire.jp/projects/968831/view</pre>
+  <button class="cp" type="button">コピー</button></div>
+
+  <div class="post"><div class="ph"><span class="sns x">X</span>お礼<span class="when">12/21（月）</span></div>
+<pre>クラウドファンディング、終わりました。
+〔○〕人の方に、〔○〕円の応援をいただきました。
+本当に、ありがとうございました。
+
+ここからが、本当のスタートです。
+会社の準備のことも、これから少しずつお知らせします。</pre>
+  <button class="cp" type="button">コピー</button></div>
+  <p class="note">Instagramは、Xと同じ文をストーリーズに分けて使えます。12/6・12/20・12/21は、公式LINEで届く声と同じ内容です。</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="chap"><i>06</i>11/22に貼り替えるリンク</div>
+  <h2>どこを、どのリンクに。</h2>
+  <p class="note top">22日0時の公開に合わせて替えます。<br>貼るリンクは、どれもCAMPFIREのページ（https://camp-fire.jp/projects/968831/view）です。</p>
+  <ol class="links">
+    <li><span class="who w-n">ながたか</span><b>Xのプロフィールのリンク</b>CAMPFIREのページに替える。初日の投稿をプロフィールに固定。</li>
+    <li><span class="who w-n">ながたか</span><b>Instagramのプロフィールのリンク</b>CAMPFIREのページに替える。</li>
+    <li><span class="who w-n">ながたか</span><b>Voicyのチャンネルの説明欄</b>CAMPFIREのページを入れる。期間中の放送の概要欄にも毎回。</li>
+    <li><span class="who w-n">ながたか</span><b>オープンチャットのノート・お知らせ</b>CAMPFIREのページを固定しておく。</li>
+    <li><span class="who w-f">fulfull</span><b>想いのページのいちばん上のボタン</b>公式LINEの登録から、CAMPFIREのページへ（公式LINEは2番目に）。22日の朝。</li>
+    <li><span class="who w-f">fulfull</span><b>会社向けのページのボタン</b>CAMPFIREの会社向けのコースへ。</li>
+    <li><span class="who w-f">fulfull</span><b>公式LINEの下のメニュー</b>クラファンのページへ行くメニューに替える。</li>
+    <li><span class="who w-f">fulfull</span><b>公式LINEの登録直後のあいさつ</b>「22日の朝にお知らせします」を「始まっています＋ページのリンク」に替える。</li>
+  </ol>
+</div></section>
+
+<footer>ながたか（永澤 貴昭）クラウドファンディング<br>告知の文と、貼り替えるリンク｜fulfull株式会社</footer>
+<script>
+document.querySelectorAll('.post .cp').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.parentNode.querySelector('pre').innerText;
+    function done(ok){b.textContent=ok?'コピーしました':'長押しで選んでコピーしてください';setTimeout(function(){b.textContent='コピー';},1800);}
+    try{navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(fallback(t))});}catch(e){done(fallback(t));}
+  });
+});
+function fallback(t){try{var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();var ok=document.execCommand('copy');document.body.removeChild(a);return ok;}catch(e){return false;}}
+</script>
+</body></html>
