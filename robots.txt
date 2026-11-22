@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /note/
 Disallow: /sakusen/
+Disallow: /yomu/
